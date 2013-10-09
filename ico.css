@@ -1,0 +1,29 @@
+.icon_add {
+ background-image: url(resources/image/add2.ico) !important;
+}
+
+.icon_delete {
+ background-image: url(resources/image/delete.ico) !important;
+}
+
+.icon_copy {
+ background-image: url(resources/image/copy.ico) !important;
+}
+
+.icon_ok {
+    background-image: url(resources/image/ok2.ico) !important;
+}
+
+.icon_expand {
+     background-image: url(resources/image/fan.ico) !important;
+ }
+
+.icon_pm {
+    background-image: url(resources/image/pm2.ico) !important;
+}
+
+.icon_refresh {
+    background-image: url(resources/image/Sync.ico) !important;
+}
+
+.bg-yellow > td { background:#fffec7 !important; }

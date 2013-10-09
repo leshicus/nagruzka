@@ -1,0 +1,59 @@
+/*ExtJs css*/
+
+/*заголовок окна*/
+.x-window-header-text-default{
+    font-size:13px
+}
+/*заголовок панели*/
+.x-panel-header-text-default-framed{
+    font-size:13px;
+}
+/*текст кнопок тулбара*/
+.x-btn-default-toolbar-small .x-btn-inner{
+    font-size:13px;
+}
+/*названия полей грида*/
+.x-column-header{
+    font:normal 13px arial;
+}
+/*отступ сверху названий полей грида*/
+.x-column-header-inner{
+    line-height:17px;
+}
+/*группированные значения в гриде*/
+.x-grid-group-title{
+    font:bold 13px arial;
+}
+/*текст полей в гриде*/
+.x-grid-row .x-grid-cell{
+    font:normal 13px/13px arial;
+}
+/*текст полей в гриде*/
+.x-grid-editor .x-form-text,.x-grid-row-editor .x-form-text{
+    font:normal 13px/13px arial;
+}
+/*заголовок fieldset*/
+.x-fieldset-header{
+    font: bold 13px/13px arial;
+}
+/*текст кнопок*/
+.x-btn-default-small .x-btn-inner{
+    font-size:13px;
+}
+/*Текст заголовка таб панелей*/
+.x-tab button{
+    font-size:13px;
+}
+/*Бордюр таб панелей*/
+.x-tab-bar-top .x-tab-bar-body{
+    border-width:0px 0px 0;
+    padding:1px 3px 3px;
+}
+/*Текст внутри fieldset*/
+.x-form-item{
+    font:normal 13px arial;
+}
+/*Заголовок fieldset*/
+.x-panel-body {
+    font-size: 13px;
+}

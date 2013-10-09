@@ -1,0 +1,21 @@
+$cur = execq( $query, false );
+foreach( $cur as $i=>$row )
+{
+    $output[$i]['NAGID'] = $row['NAGID'];
+    $output[$i]['ID'] = $row['ID'];
+    $output[$i]['GROUPID'] = $row['GROUPID'];
+    $output[$i]['GROUPNAME'] = $row['GROUPNAME'];
+    $output[$i]['TYPEID'] = $row['TYPEID'];
+    $output[$i]['HOURALL'] = $row['HOURALL'];
+    $output[$i]['HOURFACT'] = $row['HOURFACT'];
+    $output[$i]['SUBGROUP'] = $row['SUBGROUP'];
+    $output[$i]['TEACHERID'] = $row['TEACHERID'];
+
+    $output[$i]['ROOMID'] = explode(",", $row['ROOMID']);
+    $output[$i]['STREAM'] = $row['STREAM'];
+}
+
+console.log('launch App');
+
+var streamGrid = view.ownerCt;
+//console.log(view.ownerCt.columns[colIndex]);

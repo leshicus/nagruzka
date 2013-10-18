@@ -1,7 +1,7 @@
 Ext.define('App.store.GroupGrid.Grid', {
     extend: 'Ext.data.Store',
     model: 'App.model.GroupGridModel',
-    groupField:'groupName',
+    groupField:'groupname',
     /*getGroupString: function(instance) {
         if(instance.get('difCode')){
             var group = instance.get('groupName') + " (" + instance.get('difCode') + ")";
@@ -10,7 +10,7 @@ Ext.define('App.store.GroupGrid.Grid', {
         }
         return group;
     },*/
-    sorters:['groupName', 'typeId'],
+    sorters:['groupname', 'typeid'],
     autoSync: true,
  	proxy: {
 		type: 'ajax',

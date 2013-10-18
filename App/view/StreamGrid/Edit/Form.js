@@ -2,10 +2,7 @@
     extend:'Ext.form.Panel',
     alias:'widget.streamgrideditform',
     itemId:'stream-grid-edit-form',
-    height:300,
-    frame:true,
     bodyPadding: 5,
-    //layout: 'anchor',
     defaults: {
         anchor: '100%',
         valueField:'id',
@@ -13,10 +10,8 @@
     },
     fieldDefaults: {
         queryMode:'local',
-        editable:false,
-        //allowBlank: false,
-        msgTarget: 'side'/*,
-        afterLabelTextTpl: required*/
+        editable:false
+        //msgTarget: 'side',
     },
     defaultType: 'combo',
 // todo VPGroup: обработка совместного ведения предметов.
@@ -25,9 +20,20 @@
 
         var viewport = App.app.getController('Main').getViewport(),
             grid = viewport.down('streamgrid'),
-            typeStore = viewport.typeStore,
-            subjectStore = grid.subjectStore,
-            teacherStore = grid.teacherStore;
+            typeStore = Ext.data.StoreManager.lookup('Type'),
+            subjectStore = Ext.create('App.store.Subject'),
+            teacherStore = Ext.create('App.store.Teacher');
+        subjectStore.load({
+            params: {
+                studyId: Ext.ComponentQuery.query('#period')[0].getValue(),
+                divid: Ext.ComponentQuery.query('#division')[0].getValue()
+            }
+        });
+        teacherStore.load({
+            params: {
+                divid: Ext.ComponentQuery.query('#division')[0].getValue()
+            }
+        });
 
 
         this.items= [
@@ -38,28 +44,31 @@
             },
             {
                 itemId:'stream-grid-edit-type',
-                name: 'typeId',
+                name: 'typeid',
                 store:typeStore,
                 fieldLabel:'Тип',
                 allowBlank:false,
+                afterLabelTextTpl: required,
                 renderer: Ext.util.Format.comboRenderer('stream-grid-edit-type')
             },
             {
                 itemId:'stream-grid-edit-subject',
-                name: 'subjectId',
+                name: 'subjectid',
                 store:subjectStore,
                 fieldLabel:'Предмет',
                 allowBlank:false,
+                afterLabelTextTpl: required,
                 renderer: Ext.util.Format.comboRenderer('stream-grid-edit-subject')
             },
             {
                 itemId:'stream-grid-edit-teacher',
-                name: 'teacherId',
+                name: 'teacherid',
                 padding: '5 0 0 0',
                 store:teacherStore,
                 multiSelect: true,
                 fieldLabel:'Преподаватели',
                 allowBlank:false,
+                afterLabelTextTpl: required,
                 renderer: Ext.util.Format.comboRenderer('stream-grid-edit-teacher')
             },
             {
@@ -79,61 +88,39 @@
                         height:150
                     },
                     {
-                        xtype:'fieldset',
-                        title: 'Группы',
-                        layout: 'anchor',
-                        height:150,
-                        width:300,
+                        xtype:'gridpanel',
+                        itemId:'edit-form-group-grid',
+                        store: Ext.create('Ext.data.Store',{
+                            model:'App.model.FormGroupGridModel',
+                            sorters:['groupid']
+                        }),
                         margin: '0 0 0 5',
+                        padding:'5 0 0 0',
                         flex:1,
-                        items :[
+                        columnLines:true,
+                        columns:[
                             {
-                                xtype:'gridpanel',
-                                itemId:'edit-form-group-grid',
-                                store: Ext.create('Ext.data.Store',{
-                                    model:'App.model.FormGroupGridModel',
-                                    sorters:['groupId']
-                                }),
-                                //store: Ext.create('App.store.StreamGrid.Edit.GridGroup'),
-                                height:120,
-                                fieldLabel:'Группы',
-                                columnLines:true,
-                                columns:[
-                                    {
-                                        text: 'Группы',
-                                        dataIndex:'groupId',
-                                        width: 80,
-                                        renderer:editFormGroupGridColumnRenderer
-                                    },
-                                    //{text: 'Собственный предмет', dataIndex:'groupName', flex:1},
-                                    {
-                                        text: 'Удалить',
-                                        xtype: 'actioncolumn',
-                                        width:60,
-                                        align:'center',
-                                        sortable: false,
-                                        items: [{
-                                            icon: '/ext-4.2.1/examples/shared/icons/fam/delete.gif',
-                                            tooltip: 'Удалить из потока'
-                                        }]
-                                    }
-                                ]
+                                text: 'Группы',
+                                dataIndex:'groupid',
+                                flex:1,
+                                menuDisabled:true,
+                                renderer:editFormGroupGridColumnRenderer
+                            },
+                            {
+                                text: 'Удалить',
+                                xtype: 'actioncolumn',
+                                width:60,
+                                menuDisabled:true,
+                                items: [{
+                                    icon: '/ext-4.2.1/examples/shared/icons/fam/delete.gif',
+                                    tooltip: 'Удалить из потока'
+                                }]
                             }
                         ]
                     }
-
                 ]
             }
         ];
-
-
-        /*var type = this.query('#stream-grid-edit-type')[0],
-         grid = this.query('#edit-form-group-grid')[0]*/;
-
-        /*if (grid.store.length) {
-         type.setReadOnly(true);
-         }*/
-        // todo доделать
 
         this.buttons =  [{
             text: 'ОК',

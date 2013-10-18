@@ -1,4 +1,4 @@
-﻿Ext.onReady(function(){
+﻿/*Ext.onReady(function(){
     Ext.Loader.setConfig({
         enabled:true,
         //disableCaching: false,
@@ -7,12 +7,13 @@
             'Ext.ux':'../../../../ext-4.2.1/examples/ux'
         }
     });
-});
+});*/
 
 
 Ext.require([
     'Ext.grid.plugin.DragDrop'
 ]);
+Ext.Loader.setPath('Ext.ux', '/ext-4.2.1/examples/ux');
 
 // чтобы нормально значения в комбо отображались
 Ext.util.Format.comboRenderer = function (combo) {
@@ -33,34 +34,29 @@ Ext.util.Format.gridComboRenderer = function (combo, value, metaData) {
 
 function streamGridColumnRenderer(value, metaData, record, rowIndex, colIndex, store, view) {
     var streamGrid = view.ownerCt,
-        viewport = streamGrid.up('viewport'),
         columnText = streamGrid.columns[colIndex].text,
         tso = record.data['tso'],
         build = record.data['build'],
-        level = record.data['level'];
+        level = record.data['lvl'];
     switch (columnText) {
         case 'Тип':
-            var comboStore = viewport.typeStore;
+            var comboStore = Ext.data.StoreManager.lookup('Type');
             break;
         case 'Предмет':
-            var comboStore = streamGrid.subjectStore;
-            //var comboStore = view.getBubbleTarget().subjectStore;
+            var comboStore = Ext.data.StoreManager.lookup('Subject');;
             break;
         case 'Группа':
-            var comboStore = streamGrid.groupStore;
+            var comboStore = Ext.data.StoreManager.lookup('Group');
             break;
         case 'Преподаватель':
-            var comboStore = streamGrid.teacherStore;
-            //var comboStore = view.getBubbleTarget().teacherStore;
+            var comboStore = Ext.data.StoreManager.lookup('Teacher');
             break;
         case 'Аудитория':
-            var comboStore = viewport.roomStore;
+            var comboStore = Ext.data.StoreManager.lookup('Room');
             break;
         default :
             break;
-
     }
-
     metaData.style = 'white-space:normal !important;';
     //metaData.tdAttr = 'data-qtip="' + 'Советик' + '"';
 
@@ -71,7 +67,6 @@ function streamGridColumnRenderer(value, metaData, record, rowIndex, colIndex, s
         if (columnText == 'Группа' && value.length < 2) {
             metaData.style += 'background:rgb(243, 169, 202);';
         }
-
         // перебор элементов массива
         for (var i in value) {
             // найдем в соответствующем хранилище name, соответствующую данному id
@@ -81,15 +76,13 @@ function streamGridColumnRenderer(value, metaData, record, rowIndex, colIndex, s
             }
             str.push(name);
         }
-
-        // массив явно преобразовываем в строку через пробел
         return str.join(", \n");
     } else {  // обычная переменная
         // случай с аудиториями- нужно добавить tso, build, level
         if(columnText == 'Аудитория'){
-            if(record.data['roomId'] == ""
-                || record.data['roomId'][0] == ""
-                || !record.data['roomId']){ // отображаем ТСО и прочее только если не указана аудитория явно
+            if(record.data['roomid'] == ""
+                || record.data['roomid'][0] == ""
+                || !record.data['roomid']){ // отображаем ТСО и прочее только если не указана аудитория явно
                 str = [];
                 if(tso || build || level){
                     if(tso){
@@ -111,7 +104,6 @@ function streamGridColumnRenderer(value, metaData, record, rowIndex, colIndex, s
                 return name;
             }
         }
-
     }
 }
 
@@ -119,13 +111,11 @@ function streamGridColumnRenderer(value, metaData, record, rowIndex, colIndex, s
 function editFormGroupGridColumnRenderer(value, metaData, record, rowIndex, colIndex, store, view) {
     switch (colIndex) {
         case 0:
-            var streamGrid = Ext.ComponentQuery.query('streamgrid')[0],
-                groupStore = streamGrid.groupStore;
+            var groupStore = Ext.data.StoreManager.lookup('Group');
             break;
         default :
             break;
     }
-
     if (groupStore.findRecord('id', value)) {
         var rec = groupStore.findRecord('id', value);
         return rec.data['name'];
@@ -141,20 +131,11 @@ function groupGridColumnRenderer(value, metaData, record, rowIndex, colIndex, st
     switch (columnText) {
         // Тип
         case 'Тип':
-            var comboStore = viewport.typeStore;
-            break;
-        // Часы-Факт
-        /*case 2:
-            var comboStore = groupGrid.query('#hourFact')[0].getEditor().store;
-            break;*/
-        // Преподаватель
-        case 'Преподаватель':
-            var comboStore = viewport.teacherStore;
-            //comboStore.filter('divId', division);
+            var comboStore = Ext.data.StoreManager.lookup('Type');
             break;
         // Аудитория
         case 'Аудитория':
-            var comboStore = viewport.roomStore;
+            var comboStore = Ext.data.StoreManager.lookup('Room');
             break;
         default :
             break;
@@ -172,7 +153,7 @@ function groupGridColumnRenderer(value, metaData, record, rowIndex, colIndex, st
                 str.push(rec.data['name']);
             }
         }
-        return str.join(", \n");
+        return str.join(",\n");
     } else {  // обычная переменная
         if (comboStore.findRecord('id', value)) {
             var rec = comboStore.findRecord('id', value),

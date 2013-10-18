@@ -5,9 +5,9 @@
     queryMode:'local',
     editable:false,
     //multiSelect: true,
+    store: Ext.create('App.store.Teacher'),
     valueField:'id',
     displayField:'name',
-
     initComponent:function () {
         console.log('Init GroupGridTeacher');
 

@@ -1,100 +1,98 @@
 ﻿Ext.define('App.view.Viewport', {
-    extend:'Ext.container.Viewport',
+    extend: 'Ext.container.Viewport',
     layout: {
         type: 'vbox',
         align: 'stretch'
     },
-    alias:'widget.viewport',
-    defaults:{
-        border:false,
-        padding:'5 5 5 5'
+    alias: 'widget.viewport',
+    defaults: {
+        border: false
     },
-    initComponent:function () {
+    initComponent: function () {
         console.log('Init Viewport');
 
         this.items = [
             {
-                xtype:'panel',
-                title:'Учебная нагрузка',
-                frame:true,
-                items:[
+                layout: 'hbox',
+                items: [
                     {
-                        xtype:'container',
-                        layout: 'hbox',
-                        margin:'0 5 0 5',
-                        items:[
+                        layout: 'vbox',
+                        padding: '5 5 0 5',
+                        defaults: {
+                            xtype: 'combo',
+                            width: 550,
+                            editable: false,
+                            queryMode: 'local',
+                            valueField: 'id',
+                            displayField: 'name'
+                        },
+                        items: [
                             {
-                                xtype:'container',
-                                layout: 'vbox',
-                                margin:'0 5 0 5',
-                                defaults:{
-                                    width:550
-                                },
-                                items:[
-                                    {
-                                        fieldLabel:'Кафедра',
-                                        xtype:'combo',
-                                        queryMode:'local',
-                                        //readOnly:true,
-                                        editable:false,
-                                        forceFit:true,
-                                        valueField:'id',
-                                        //value:divName,
-                                        displayField:'name',
-                                        name:'division',
-                                        itemId:'division',
-                                        store:'Division'
-                                    },
-                                    {
-                                        fieldLabel:'Период',
-                                        xtype:'combo',
-                                        forceFit:true,
-                                        queryMode:'local',
-                                        editable:false,
-                                        valueField:'id',
-                                        displayField:'name',
-                                        name:'period',
-                                        itemId:'period',
-                                        store:Ext.create('App.store.Period')
-                                    },
-                                    {
-                                        fieldLabel:'Курс',
-                                        xtype:'combo',
-                                        queryMode:'local',
-                                        editable:false,
-                                        valueField:'id',
-                                        displayField:'name',
-                                        name:'grade',
-                                        itemId:'grade',
-                                        store:Ext.create('App.store.Grade')
-                                    },
-                                    {
-                                        fieldLabel:'Предмет',
-                                        xtype:'combo',
-                                        queryMode:'local',
-                                        editable:false,
-                                        align:'left',
-                                        valueField:'id',
-                                        displayField:'name',
-                                        name:'subject',
-                                        itemId:'subject'
-                                        //store:Ext.create('App.store.Subject')
-                                    }
-                                ]
+                                fieldLabel: 'Кафедра',
+                                name: 'division',
+                                itemId: 'division',
+                                store: 'Division'
                             },
                             {
-                                xtype:'audfieldset',
-                                title: 'Подбор аудитории',
-                                layout: 'anchor',
-                                width:220,
-                                height:103,
-                                padding:'6px'
+                                fieldLabel: 'Период',
+                                name: 'period',
+                                itemId: 'period',
+                                store: Ext.create('App.store.Period')
+                            },
+                            {
+                                fieldLabel: 'Курс',
+                                name: 'grade',
+                                itemId: 'grade',
+                                store: 'Grade'
+                            },
+                            {
+                                fieldLabel: 'Предмет',
+                                name: 'subject',
+                                itemId: 'subject',
+                                store: Ext.create('App.store.Subject')
                             }
                         ]
                     },
                     {
-                        xtype:'studyworktabpanel',
-                        width:'100%'
+                        xtype: 'audfieldset',
+                        title: 'Подбор аудитории',
+                        layout: 'anchor',
+                        width: 220,
+                        height: 115,
+                        padding: '6px'
+                    }
+                ]
+            },
+            {
+                xtype: 'tabpanel',
+                flex: 1,
+                frame: true,
+                items: [
+                    {
+                        itemId: 'auditorium-tab',
+                        title: 'Аудиторная',
+                        cls: 'ContentPanel',
+                        layout: {
+                            type: 'hbox',
+                            align: 'stretch'
+
+                        },
+                        items: [
+                            {
+                                xtype: 'groupgrid'
+                            },
+                            {
+                                xtype: 'streamgrid'
+                            }
+                        ]
+                    },
+                    {
+                        itemId: 'no-auditorium-tab',
+                        title: 'Внеаудиторная'
+                    },
+                    {
+                        itemId: 'other-types-tab',
+                        title: 'Другие виды'
                     }
                 ]
             }

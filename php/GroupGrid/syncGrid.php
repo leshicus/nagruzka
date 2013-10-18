@@ -3,18 +3,11 @@ require_once("./../../include.php");
 
 $data = json_decode(file_get_contents('php://input'), true);
 
-$studyId = $_REQUEST['studyId'];
+$studyId = $_REQUEST['studyid'];
 $grade = $_REQUEST['grade'];
-$divId = $_REQUEST['divId'];
-$subjectId = $_REQUEST['subjectId'];
+$divId = $_REQUEST['divid'];
+$subjectId = $_REQUEST['subjectid'];
 $success = true;
-
-// актуальные таблицы
-$nagruzka = $_REQUEST['nagruzka'];
-$nagruzka_lec = $_REQUEST['nagruzka_lec'];
-$nagruzka_lab = $_REQUEST['nagruzka_labs'];
-$nagruzka_sem = $_REQUEST['nagruzka_sem'];
-$nagruzka_rep = $_REQUEST['nagruzka_rep'];
 
 $magi = "(SELECT G.GROCODE,
                               G.GROID,
@@ -42,13 +35,13 @@ $magi = "(SELECT G.GROCODE,
 switch ($_REQUEST['act']) {
 // create
     case 'create':
-        $groupId = $data['groupId'];
-        $nagId = $data['nagId'];
-        $roomId = implode(',', $data['roomId']);
+        $groupId = $data['groupid'];
+        $nagId = $data['nagid'];
+        $roomId = implode(',', $data['roomid']);
         $stream = $data['stream'];
-        $teacherId = $data['teacherId'];
-        $typeId = $data['typeId'];
-        $hourFact = $data['hourFact'];
+        $teacherId = $data['teacherid'];
+        $typeId = $data['typeid'];
+        $hourFact = $data['hourfact'];
         $id = $data['id'];
 
         switch ($typeId) {
@@ -158,7 +151,7 @@ switch ($_REQUEST['act']) {
                   (case when t.lec > 0 then '1' end)   as TYPEID,
                   (case when t.lec > 0 then t.lec end) as HOURALL,
                   null         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   l.prepid     as TEACHERID,
                   l.audids      as ROOMID,
                   decode(t.potok_lek, 0, null, t.potok_lek) as STREAM
@@ -193,7 +186,7 @@ switch ($_REQUEST['act']) {
                   (case when t.lec > 0 then '1' end)   as TYPEID,
                   (case when t.lec > 0 then t.lec end) as HOURALL,
                   null         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   l.prepid     as TEACHERID,
                   l.audids      as ROOMID,
                   decode(t.potok_lek, 0, null, t.potok_lek)  as STREAM
@@ -230,7 +223,7 @@ switch ($_REQUEST['act']) {
                   (case when t.lec > 0 then '1' end)   as TYPEID,
                   (case when t.lec > 0 then t.lec end) as HOURALL,
                   null         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   l.prepid     as TEACHERID,
                   l.audids      as ROOMID,
                   decode(t.potok_lek, 0, null, t.potok_lek)  as STREAM
@@ -262,7 +255,7 @@ switch ($_REQUEST['act']) {
                   (case when t.lab > 0 then '2' end)   as TYPEID,
                   (case when t.lab > 0 then t.lab end) as HOURALL,
                   null         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   l.prepid     as TEACHERID,
                   l.audids      as ROOMID,
                   decode(t.potok_lab, 0, null, t.potok_lab)  as STREAM
@@ -297,7 +290,7 @@ switch ($_REQUEST['act']) {
                   (case when t.lab > 0 then '2' end)   as TYPEID,
                   (case when t.lab > 0 then t.lab end) as HOURALL,
                   null         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   l.prepid     as TEACHERID,
                   l.audids      as ROOMID,
                   decode(t.potok_lab, 0, null, t.potok_lab)  as STREAM
@@ -334,7 +327,7 @@ switch ($_REQUEST['act']) {
                   (case when t.lab > 0 then '2' end)   as TYPEID,
                   (case when t.lab > 0 then t.lab end) as HOURALL,
                   null         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   l.prepid     as TEACHERID,
                   l.audids      as ROOMID,
                   decode(t.potok_lab, 0, null, t.potok_lab)  as STREAM
@@ -366,7 +359,7 @@ switch ($_REQUEST['act']) {
                   (case when t.sem > 0 then '3' end)   as TYPEID,
                   (case when t.sem > 0 then t.sem end) as HOURALL,
                   null         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   l.prepid     as TEACHERID,
                   l.audids      as ROOMID,
                   decode(t.potok_sem, 0, null, t.potok_sem)  as STREAM
@@ -401,7 +394,7 @@ switch ($_REQUEST['act']) {
                   (case when t.sem > 0 then '3' end)   as TYPEID,
                   (case when t.sem > 0 then t.sem end) as HOURALL,
                   null         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   l.prepid     as TEACHERID,
                   l.audids      as ROOMID,
                   decode(t.potok_sem, 0, null, t.potok_sem)  as STREAM
@@ -438,7 +431,7 @@ switch ($_REQUEST['act']) {
                   (case when t.sem > 0 then '3' end)   as TYPEID,
                   (case when t.sem > 0 then t.sem end) as HOURALL,
                   null         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   l.prepid     as TEACHERID,
                   l.audids      as ROOMID,
                   decode(t.potok_sem, 0, null, t.potok_sem)  as STREAM
@@ -470,7 +463,7 @@ switch ($_REQUEST['act']) {
                   (case when nvl(t.v4, 0) > 0 then '4' end)  as TYPEID,
                   (case when nvl(t.v4, 0) > 0 then nvl(t.v4, 0) end) as HOURALL,
                   r.N4         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   r.prepid     as TEACHERID,
                   null         as ROOMID,
                   null         as STREAM
@@ -505,7 +498,7 @@ switch ($_REQUEST['act']) {
                   (case when nvl(t.v4, 0) > 0 then '4' end)  as TYPEID,
                   (case when nvl(t.v4, 0) > 0 then nvl(t.v4, 0) end) as HOURALL,
                   r.N4         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   r.prepid     as TEACHERID,
                   null         as ROOMID,
                   null         as STREAM
@@ -542,7 +535,7 @@ switch ($_REQUEST['act']) {
                   (case when nvl(t.v4, 0) > 0 then '4' end)  as TYPEID,
                   (case when nvl(t.v4, 0) > 0 then nvl(t.v4, 0) end) as HOURALL,
                   r.N4         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   r.prepid     as TEACHERID,
                   null         as ROOMID,
                   null         as STREAM
@@ -573,7 +566,7 @@ switch ($_REQUEST['act']) {
                   (case when nvl(t.v5, 0) > 0 then '5' end)  as TYPEID,
                   (case when nvl(t.v5, 0) > 0 then nvl(t.v5, 0) end) as HOURALL,
                   r.N5         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   r.prepid     as TEACHERID,
                   null         as ROOMID,
                   null         as STREAM
@@ -608,7 +601,7 @@ switch ($_REQUEST['act']) {
                   (case when nvl(t.v5, 0) > 0 then '5' end)  as TYPEID,
                   (case when nvl(t.v5, 0) > 0 then nvl(t.v5, 0) end) as HOURALL,
                   r.N5         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   r.prepid     as TEACHERID,
                   null         as ROOMID,
                   null         as STREAM
@@ -645,7 +638,7 @@ switch ($_REQUEST['act']) {
                   (case when nvl(t.v5, 0) > 0 then '5' end)  as TYPEID,
                   (case when nvl(t.v5, 0) > 0 then nvl(t.v5, 0) end) as HOURALL,
                   r.N5         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   r.prepid     as TEACHERID,
                   null         as ROOMID,
                   null         as STREAM
@@ -676,7 +669,7 @@ switch ($_REQUEST['act']) {
                   (case when nvl(t.v7, 0) > 0 then '6' end)  as TYPEID,
                   (case when nvl(t.v7, 0) > 0 then nvl(t.v7, 0) end) as HOURALL,
                   r.N7         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   r.prepid     as TEACHERID,
                   null         as ROOMID,
                   null         as STREAM
@@ -711,7 +704,7 @@ switch ($_REQUEST['act']) {
                   (case when nvl(t.v7, 0) > 0 then '6' end)  as TYPEID,
                   (case when nvl(t.v7, 0) > 0 then nvl(t.v7, 0) end) as HOURALL,
                   r.N7         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   r.prepid     as TEACHERID,
                   null         as ROOMID,
                   null         as STREAM
@@ -748,7 +741,7 @@ switch ($_REQUEST['act']) {
                   (case when nvl(t.v7, 0) > 0 then '6' end)  as TYPEID,
                   (case when nvl(t.v7, 0) > 0 then nvl(t.v7, 0) end) as HOURALL,
                   r.N7         as HOURFACT,
-                  t.subgroup   as SUBGROUP,
+                  --t.subgroup   as SUBGROUP,
                   r.prepid     as TEACHERID,
                   null         as ROOMID,
                   null         as STREAM
@@ -769,37 +762,33 @@ switch ($_REQUEST['act']) {
                 order by GROUPNAME
             ";
 //echo $query;
-        /*$result = oci_parse($conn, $query);
-
-        if (!(oci_execute($result))) throw new Exception;
-        while ($row = oci_fetch_array($result, OCI_ASSOC)) {
-            $output[] = $row;
-        }
-        oci_free_statement($result);*/
-        $cur = execq($query, false);
-        foreach ($cur as $i => $row) {
-            $output[$i]['NAGID'] = $row['NAGID'];
-            $output[$i]['ID'] = $row['ID'];
-            $output[$i]['GROUPID'] = $row['GROUPID'];
-            $output[$i]['GROUPNAME'] = $row['GROUPNAME'];
-            $output[$i]['TYPEID'] = $row['TYPEID'];
-            $output[$i]['HOURALL'] = $row['HOURALL'];
-            $output[$i]['HOURFACT'] = $row['HOURFACT'];
-            $output[$i]['SUBGROUP'] = $row['SUBGROUP'];
-            $output[$i]['TEACHERID'] = $row['TEACHERID'];
-            $output[$i]['ROOMID'] = explode(",", $row['ROOMID']);
-            $output[$i]['STREAM'] = $row['STREAM'];
+        try {
+            $result = execq($query, false);
+            foreach ($result as $i => $data)
+                foreach ($data as $k => $v){
+                    if($k == 'ROOMID')
+                        $output[$i][strtolower($k)] = explode(",", $v);
+                    else
+                        $output[$i][strtolower($k)] = $v;
+                }
+        } catch (Exception $e) {
+            $success = false;
+            echo json_encode(
+                array('success' => $success,
+                    'message' => $query));
         }
 
-        echo '{rows:' . json_encode($output) . '}';
+        if ($success) {
+            echo '{rows:' . json_encode($output) . '}';
+        }
         break;
 // update
     case 'update':
-        $typeId = $data['typeId'];
+        $typeId = $data['typeid'];
         $id = $data['id'];
-        $teacherId = $data['teacherId'];
-        $hourFact = $data['hourFact'];
-        $roomId = implode(',', $data['roomId']);
+        $teacherId = $data['teacherid'];
+        $hourFact = $data['hourfact'];
+        $roomId = implode(',', $data['roomid']);
         $stream = $data['stream'];
 
         switch ($typeId) {
@@ -865,7 +854,7 @@ switch ($_REQUEST['act']) {
         break;
 // destroy
     case 'destroy':
-        $typeId = $data['typeId'];
+        $typeId = $data['typeid'];
         $id = $data['id'];
 
         switch ($typeId) {

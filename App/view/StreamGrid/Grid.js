@@ -3,8 +3,11 @@
     alias:'widget.streamgrid',
     itemId:'stream-grid',
     frame:true,
-    forceFit: true,
-    height:475,
+    //forceFit: true,
+    //flex:1,
+    title:'Потоки',
+    width:700,
+    margin: '5 5 5 0',
     columnLines:true,
     viewConfig:{
         plugins:{
@@ -21,7 +24,6 @@
         }
     },
     draggable:false,
-
     initComponent:function () {
         console.log('Init StreamGrid');
 
@@ -45,60 +47,61 @@
             {
                 xtype:'rownumberer',
                 text:'№',
-                width:25
+                width:30
             },
             {
                 text:'Поток',
                 dataIndex:'stream',
-                width:50,
+                width:70,
                 align: 'center'
             },
             {
                 text:'Тип',
-                dataIndex:'typeId',
-                width:100,
+                dataIndex:'typeid',
+                width:50,
                 renderer:streamGridColumnRenderer
             },
             {
                 text:'Предмет',
-                dataIndex:'subjectId',
-                width:200,
+                dataIndex:'subjectid',
+                //width:200,
+                flex:1,
                 renderer:streamGridColumnRenderer
             },
             {
                 text:'Группа',
-                dataIndex:'groupId',
-                width:80,
+                dataIndex:'groupid',
+                width:90,
                 renderer:streamGridColumnRenderer
             },
             {
                 text:'Преподаватель',
-                dataIndex:'teacherId',
-                width:100,
+                dataIndex:'teacherid',
+                width:120,
                 renderer:streamGridColumnRenderer
             },
             {
                 text:'Аудитория',
-                dataIndex:'roomId',
-                width:75,
+                dataIndex:'roomid',
+                width:80,
                 renderer:streamGridColumnRenderer
             }
         ];
 
-        this.groupStore = this.getGroupStore();
+        //this.groupStore = this.getGroupStore();
 
         this.callParent(arguments);
         console.log('Init StreamGrid end');
     },
 
-    getGroupStore:function () {
-        /*var studyId = this.getBubbleTarget().up('viewport').query('#period')[0].getValue(),
+/*    getGroupStore:function () {
+        *//*var studyId = this.getBubbleTarget().up('viewport').query('#period')[0].getValue(),
             divId = App.app.getController('Main').getViewport().query('#division')[0].getValue();
-*/
+*//*
         var store = Ext.create('App.store.StreamGrid.Edit.Group');
         //store.load();
         return store;
-    },
+    },*/
 
     // отмеченная ячейка
     getSelected:function () {

@@ -1,18 +1,10 @@
 <?
 require_once("./../../include.php");
 
-$studyId = $_REQUEST['studyId'];
-$divId = $_REQUEST['divId'];
+$studyId = $_REQUEST['studyid'];
+$divId = $_REQUEST['divid'];
 $data = json_decode(file_get_contents('php://input'), true);
 $success = true; // результат выполнения блока
-
-// актуальные таблицы
-$nagruzka = $_REQUEST['nagruzka'];
-$nagruzka_lec = $_REQUEST['nagruzka_lec'];
-$nagruzka_lab = $_REQUEST['nagruzka_labs'];
-$nagruzka_sem = $_REQUEST['nagruzka_sem'];
-$nagruzka_rep = $_REQUEST['nagruzka_rep'];
-
 
 switch ($_REQUEST['act']) {
     case 'read':
@@ -231,22 +223,20 @@ switch ($_REQUEST['act']) {
                 and (case when t.sem > 0 then '3' end) is not null
                 group by t.potok_sem
             ";
+       // echo $query;
         try {
-            $cur = execq($query, false);
-            foreach ($cur as $i => $row) {
-                $output[$i]['STREAM'] = $row['STREAM'];
-                $output[$i]['TYPEID'] = $row['TYPEID'];
-                $output[$i]['GROUPID'] = explode(",", $row['GROUPID']);
-                $output[$i]['NAGID'] = explode(",", $row['NAGID']);
-                $output[$i]['RASPREDID'] = explode(",", $row['RASPREDID']);
-                $output[$i]['SUBJECTID'] = $row['SUBJECTID'];
-                $output[$i]['ROOMID'] = explode(",", $row['ROOMID']);
-                $output[$i]['TEACHERID'] = explode(",", $row['TEACHERID']);
-                $output[$i]['TSO'] = $row['TSO'];
-                $output[$i]['BUILD'] = $row['BUILD'];
-                $output[$i]['LEVEL'] = $row['LVL'];
-            }
-            //echo '{rows:' . json_encode($output) . '}';
+            $result = execq($query, false);
+            foreach ($result as $i => $data)
+                foreach ($data as $k => $v){
+                    if($k == 'GROUPID'
+                        || $k == 'NAGID'
+                        || $k == 'RASPREDID'
+                        || $k == 'ROOMID'
+                        || $k == 'TEACHERID')
+                        $output[$i][strtolower($k)] = explode(",", $v);
+                    else
+                        $output[$i][strtolower($k)] = $v;
+                }
         } catch (Exception $e) {
             $success = false;
             echo json_encode(
@@ -254,15 +244,15 @@ switch ($_REQUEST['act']) {
                     'message' => $query));
         }
         if ($success) {
-            echo json_encode(array('rows' => $output));
+            echo '{rows:' . json_encode($output) . '}';
         }
         break;
 
     // * при удалении строки потока
     case 'destroy':
-        $typeId = $data['typeId'];
-        $nagId = $data['nagId'];
-        $teacherId = $data['teacherId'];
+        $typeId = $data['typeid'];
+        $nagId = $data['nagid'];
+        $teacherId = $data['teacherid'];
         $stream = $data['stream'];
 
         if ($nagId.length) {
@@ -361,17 +351,17 @@ switch ($_REQUEST['act']) {
 
     // * при удалении группы из потока
     case 'update':
-        $typeId = $data['typeId'];
+        $typeId = $data['typeid'];
         $deleted_nagid = $data['deleted_nagid']; // nagid удаленных групп из потока
-        $nagId = $data['nagId'];
-        $raspredId = $data['raspredId'];
-        $teacherArray = $data['teacherId'];
-        $roomId = $data['roomId'];
+        $nagId = $data['nagid'];
+        $raspredId = $data['raspredid'];
+        $teacherArray = $data['teacherid'];
+        $roomId = $data['roomid'];
         $tso = $data['tso'];
         $level = $data['level'];
         $build = $data['build'];
         $stream = $data['stream'];
-        $subjectId = $data['subjectId'];
+        $subjectId = $data['subjectid'];
 
         // если удалили группы из потока
         if ($deleted_nagid) {
@@ -419,7 +409,7 @@ switch ($_REQUEST['act']) {
                     array('success' => $success,
                         'message' => $query));
             }
-
+//echo $query;
             // * нужно оставить одну запись в таблице nagruzka_raspred.
             // * поля stream, rooms, audids, prepid нужно очистить
             reset($deleted_nagid);
@@ -448,6 +438,7 @@ switch ($_REQUEST['act']) {
                                 array('success' => $success,
                                     'message' => $query));
                         }
+//echo $query;
                     } else {
                         $tchr = $teacherArray[$j];
                         $query = "delete from $nagruzka_lec l
@@ -465,6 +456,7 @@ switch ($_REQUEST['act']) {
                                 array('success' => $success,
                                     'message' => $query));
                         }
+//echo $query;
                     }
                 }
             }
@@ -483,18 +475,18 @@ switch ($_REQUEST['act']) {
 
     // добавление записи о группе в таблицы нагрузки
     case 'addGroup':
-        $nagId = $_REQUEST['nagId'];
-        $groupId = $_REQUEST['groupId'];
+        $nagId = $_REQUEST['nagid'];
+        $groupId = $_REQUEST['groupid'];
         $stream = $_REQUEST['stream'];
-        $subjectId = $_REQUEST['subjectId'];
-        $teacherArray = explode(',', $_REQUEST['teacherId']);
-        $roomId = $_REQUEST['roomId'];
-        $roomsArray = explode(',', $_REQUEST['roomId']);
-        $typeId = $_REQUEST['typeId'];
+        $subjectId = $_REQUEST['subjectid'];
+        $teacherArray = explode(',', $_REQUEST['teacherid']);
+        $roomId = $_REQUEST['roomid'];
+        $roomsArray = explode(',', $_REQUEST['roomid']);
+        $typeId = $_REQUEST['typeid'];
         $build = $_REQUEST['build'];
         $level = $_REQUEST['level'];
         $tso = $_REQUEST['tso'];
-        $raspredId = $_REQUEST['raspredId'];
+        $raspredId = $_REQUEST['raspredid'];
 
 
         if ($groupId && $nagId && $teacherArray && $subjectId && $stream) {

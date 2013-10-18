@@ -1,5 +1,5 @@
 <?
-for($i=0; $i<5; $i++){
+for($i=0; $i<19; $i++){
     $output[$i] = array("id"=>"$i", "name"=>"$i"+1);
 }
 

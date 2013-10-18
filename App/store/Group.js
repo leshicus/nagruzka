@@ -1,10 +1,10 @@
-Ext.define('App.store.StreamGrid.Edit.Group', {
+Ext.define('App.store.Group', {
     extend: 'Ext.data.Store',
     model: 'App.model.ComboModel',
 
     proxy: {
         type: 'rest',
-        url: 'php/StreamGrid/Edit/getGroup.php?' + tablesPhpStream,
+        url: 'php/getGroup.php?' + tablesPhpStream,
         reader: {
             type: 'json',
             root: 'rows'

@@ -3,9 +3,10 @@
     alias:'widget.groupgrid',
     itemId:'group-grid',
     frame:true,
-    forceFit:true,
+    //forceFit:true,
+    flex:1,
     title:'Группы',
-    height:500,
+    margin: '5 10 5 5',
     features:[groupingFeature],
     plugins:[
         cellEditing
@@ -20,18 +21,21 @@
         copy:true
     },
     columnLines:true,
-
     initComponent:function () {
         console.log('Init GroupGrid');
 
         // загружаем сторы
         this.store = Ext.create('App.store.GroupGrid.Grid');
         // создаем комбо c уже загруженными сторами
-        var teacher = Ext.create('App.view.GroupGrid.Teacher'/*, {store:this.teacherStore}*/),
-            jointBegin = Ext.create('App.view.GroupGrid.Week'/*, {store:this.weekStore}*/),
-            jointEnd = Ext.create('App.view.GroupGrid.Week'/*, {store:this.weekStore}*/),
-            room = Ext.create('App.view.GroupGrid.Room' /*сюда не можем передать стор, т.к. он пока не создан в audpanel*/),
+        var teacher = Ext.create('App.view.GroupGrid.Teacher'),
+            jointBegin = Ext.create('App.view.GroupGrid.Week'),
+            jointEnd = Ext.create('App.view.GroupGrid.Week'),
+            room = Ext.create('App.view.GroupGrid.Room'),
             hourFact = Ext.create('App.view.GroupGrid.HourFact');
+
+/*        teacher.store.filterBy(function (rec, id) {
+            return rec.get('divid') == divid;
+        });*/
 
         this.tbar = [
             {
@@ -61,9 +65,8 @@
         this.columns = [
             {
                 text:'Тип',
-                dataIndex:'typeId',
-                width:100,
-                minWidth:100,
+                dataIndex:'typeid',
+                width:50,
                 sortable:false,
                 menuDisabled:true,
                 renderer:groupGridColumnRenderer
@@ -74,51 +77,41 @@
                 columns:[
                     {
                         text:'Всего',
-                        dataIndex:'hourAll',
-                        width:45,
-                        minWidth:45,
-                        menuDisabled:true,
-                        flex:1,
-                        align:'center'
+                        dataIndex:'hourall',
+                        width:50,
+                        menuDisabled:true
                     },
                     {
                         text:'Факт',
-                        dataIndex:'hourFact',
+                        dataIndex:'hourfact',
                         itemId:'hourFact',
-                        //width:45,
-                        minWidth:45,
-                        align:'center',
+                        width:45,
                         menuDisabled:true,
                         editor:hourFact
                         //renderer:groupGridColumnRenderer
                     }
                 ]
             },
-
             {
                 text:'Подгр',
                 dataIndex:'subgroup',
-                width:45,
-                minWidth:45,
-                menuDisabled:true,
-                align:'center'
+                width:50,
+                menuDisabled:true
             },
             {
                 text:'Преподаватель',
-                dataIndex:'teacherId',
+                dataIndex:'teacherid',
                 itemId:'teacher',
-                width:180,
-                minWidth:180,
+                flex:1,
                 editor:teacher,
                 menuDisabled:true,
-                renderer:groupGridColumnRenderer
+                renderer:Ext.util.Format.comboRenderer(teacher)
             },
             {
                 text:'Аудитория',
-                dataIndex:'roomId',
+                dataIndex:'roomid',
                 itemId:'room',
-                width:75,
-                minWidth:75,
+                width:80,
                 editor:room,
                 menuDisabled:true,
                 renderer:groupGridColumnRenderer
@@ -126,8 +119,7 @@
             {
                 text:'Поток',
                 dataIndex:'stream',
-                width:50,
-                minWidth:50,
+                width:70,
                 menuDisabled:true,
                 align:'center'
             },
@@ -136,18 +128,16 @@
                 columns:[
                     {
                         text:'Кафедра',
-                        //width:100,
+                        width:100,
                         sortable:true,
-                        menuDisabled:true,
-                        flex:1,
-                        dataIndex:'jointDivision'
+                        dataIndex:'jointdivision'
                     },
                     {
                         text:'С',
                         width:40,
                         sortable:true,
                         itemId:'jointBegin',
-                        dataIndex:'jointBegin',
+                        dataIndex:'jointbegin',
                         menuDisabled:true,
                         editor:jointBegin
                     },
@@ -156,7 +146,7 @@
                         width:40,
                         sortable:true,
                         itemId:'jointEnd',
-                        dataIndex:'jointEnd',
+                        dataIndex:'jointend',
                         menuDisabled:true,
                         editor:jointEnd
                     }
@@ -182,12 +172,12 @@
         var selection = this.getSelected();
 
         // нельзя давать удалять запись, если она единственная такого типа
-        var groupName = selection.data['groupName'],
-            type = selection.data['typeId'],
+        var groupName = selection.data['groupname'],
+            type = selection.data['typeid'],
             stream = selection.data['stream'];
 
         var cntMix = this.store.queryBy(function (record, id) {
-            if (record.get('groupName') == groupName && record.get('typeId') == type) {
+            if (record.get('groupname') == groupName && record.get('typeid') == type) {
                 return true;
             }
         });
@@ -221,7 +211,7 @@
             groupgrid = Ext.ComponentQuery.query('groupgrid')[0];  // индекс копируемой строки
         if (selectedRow) {
             // дублировать можно только занятия не в потоке и не лекции
-            if (selectedRow.data['stream'] == "" && selectedRow.data['typeId'] != '1') {
+            if (selectedRow.data['stream'] == "" && selectedRow.data['typeid'] != '1') {
                 /* // пример как можно взять возвращаемое значение из php
                 this.store.sync({
                     success:function (batch) {
@@ -229,13 +219,13 @@
                     }
                 });*/
                 Ext.Ajax.request({
-                    url:'php/getLessonNextval.php?typeId=' + selectedRow.get('typeId'),
+                    url:'php/getLessonNextval.php?typeid=' + selectedRow.get('typeid'),
                     success:function (response, options) {
                         var obj = Ext.decode(response.responseText),
                             id = obj.id,
                             newRecord = selectedRow.copy();
 
-                        newRecord.set('hourFact', 0);
+                        newRecord.set('hourfact', 0);
                         newRecord.setId(id);
                         // генерация уникального id для скопированного record
                         Ext.data.Model.id(newRecord);
@@ -253,17 +243,17 @@
 
     // перенумерация подгрупп
     SubgroupRenumbering:function (record) {
-        var group = record.data['groupId'],
-            type = record.data['typeId'],
+        var group = record.data['groupid'],
+            type = record.data['typeid'],
             stream = record.data['stream'],
             j = 0;
 
         // * Только для лекций, лаб и семинаров.
         // * И не для потоков, т.к. там 2 строки имеют смысл не подгрупп,
         // * а то, что несколько преподавателей ведут поток.
-        if (type <= 3 && stream == null) {
+        if (type <= 3 && stream == "") {
             var cntMix = this.store.queryBy(function (record, id) {
-                if (record.get('groupId') == group && record.get('typeId') == type) {
+                if (record.get('groupid') == group && record.get('typeid') == type) {
                     j++;
                     record.data['subgroup'] = j;
                     return true;
@@ -274,6 +264,7 @@
                 var id = cntMix.items[0].get('id');
                 this.store.findRecord('id', id).data['subgroup'] = null;
             }
+            this.store.sort();
         }
     },
 
@@ -282,14 +273,14 @@
         var stream = dropRec.get('stream'),
             streamGrid = Ext.ComponentQuery.query('streamgrid')[0],
             streamStore = streamGrid.store,
-            streamType = dropRec.get('typeId'),
-            groupType = recs.get('typeId'),
+            streamType = dropRec.get('typeid'),
+            groupType = recs.get('typeid'),
             rec = streamStore.findRecord('stream', stream),
-            groupSource = recs.get('groupId'),
+            groupSource = recs.get('groupid'),
             groupGrid = Ext.ComponentQuery.query('groupgrid')[0],
-            groupSourceNagId = recs.get('nagId'),
+            groupSourceId = recs.get('id'),
             groupStore = groupGrid.store,
-            groups = rec.data['groupId'];
+            groups = rec.data['groupid'];
 
         // проверим, что занятие не разделено на подгруппы
         if (recs.get('subgroup')) {
@@ -311,9 +302,8 @@
                      1.)если тип добавляемого занятия не совпадает с типом занятия
                      в потоке, нужно спросить подтверждение
                      2.) если в группе есть подходящее по типу занятие, то нужно об этом сообщить*/
-
                     if (streamType != groupType) { // разные типы занятий
-                        var cnt = this.getCountSuitableType(groupSource, streamType, groupSourceNagId, groupStore);
+                        var cnt = this.getCountSuitableType(groupSource, streamType, groupSourceId, groupStore);
                         //console.log(cnt);
                         if (cnt > 0) {
                             Ext.example.msg('Не добавлено', 'В группе есть занятие подходящего типа. Выберите его');
@@ -321,7 +311,7 @@
                             // подходящего по типу занятия не нашли. Нужно менять тип занятия
                             Ext.Msg.confirm('Изменение типа', 'Тип занятия потока отличается от типа занятия группы.<br>Поменять тип занятия группы?', function (button) {
                                 if (button == 'yes') {
-                                    this.store.findRecord('nagId', groupSourceNagId).set('typeId', streamType);
+                                    this.store.findRecord('id', groupSourceId).set('typeid', streamType);
                                     this.insertRowToStreamGrid(recs, dropRec, groupStore, streamStore);
                                 }
                             }, this);
@@ -340,52 +330,52 @@
     insertRowToStreamGrid:function (recs, dropRec, groupStore, streamStore) {
         var stream = dropRec.get('stream'),
             streamGrid = Ext.ComponentQuery.query('streamgrid')[0],
-            groupId = recs.get('groupId'),
-            nagId = recs.get('nagId'),
-            subjectId = dropRec.get('subjectId'),
-            teacherId = dropRec.get('teacherId'),
-            roomId = dropRec.get('roomId'),
-            typeId = dropRec.get('typeId'),
+            groupId = recs.get('groupid'),
+            nagId = recs.get('nagid'),
+            subjectId = dropRec.get('subjectid'),
+            teacherId = dropRec.get('teacherid'),
+            roomId = dropRec.get('roomid'),
+            typeId = dropRec.get('typeid'),
             build = dropRec.get('build'),
             level = dropRec.get('level'),
             tso = dropRec.get('tso'),
             raspredId = recs.get('id'),
             groupGrid = Ext.ComponentQuery.query('groupgrid')[0];
 
-        var groupTarget = streamStore.findRecord('stream', stream).get('groupId');
+        var groupTarget = streamStore.findRecord('stream', stream).get('groupid');
         //console.log(groupTarget, groupId, stream, streamStore, nagId);
         // проверим, в обновляемом потоке 1 группа или массив (groupTarget- массив или нет)
-        streamStore.findRecord('stream', stream).data['groupId'].push(groupId);
-        streamStore.findRecord('stream', stream).data['nagId'].push(nagId);
+        streamStore.findRecord('stream', stream).data['groupid'].push(groupId);
+        streamStore.findRecord('stream', stream).data['nagid'].push(nagId);
 
         // * добавление в базу новой группы
         // * при этом создаются записи в NAGRUZKA и NAGRUZKA_RASPRED
         Ext.Ajax.request({
             url:'php/StreamGrid/syncGrid.php' + '?act=addGroup'
                                               + '&' + tablesPhpStream
-                                              + '&groupId=' + groupId
-                                              + '&nagId=' + nagId
+                                              + '&groupid=' + groupId
+                                              + '&nagid=' + nagId
                                               + '&stream=' + stream
-                                              + '&subjectId=' + subjectId
-                                              + '&teacherId=' + teacherId
-                                              + '&roomId=' + roomId
-                                              + '&typeId=' + typeId
+                                              + '&subjectid=' + subjectId
+                                              + '&teacherid=' + teacherId
+                                              + '&roomid=' + roomId
+                                              + '&typeid=' + typeId
                                               + '&build=' + build
                                               + '&level=' + level
                                               + '&tso=' + tso
-                                              + '&raspredId=' + raspredId,
+                                              + '&raspredid=' + raspredId,
             success:function (response, options) {
                 var obj = Ext.decode(response.responseText),
-                    nagId = obj.nagId,
-                    groupId = obj.groupId;
+                    nagId = obj.nagid,
+                    groupId = obj.groupid;
 
                 // * обновим stream в строке-исходнике в groupGrid
                 // * просто показать, что запись теперь в потоке
                 var idSource = recs.data['id'],
                     sourceRec = groupGrid.store.findRecord('id', idSource);
                 sourceRec.data['stream'] = stream;
-                sourceRec.data['teacherId'] = dropRec.get('teacherId');
-                sourceRec.data['roomId'] = dropRec.get('roomId');
+                sourceRec.data['teacherid'] = dropRec.get('teacherid');
+                sourceRec.data['roomid'] = dropRec.get('roomid');
                 dropRec.phantom = false;
                 groupGrid.store.reload();
             }
@@ -396,11 +386,11 @@
 
     // поищем в исходной группе, может там есть подходящее по типу занятие
     // возвращаем количество подходящих записей (0 или 1)
-    getCountSuitableType:function (groupSource, streamType, groupSourceNagId, groupStore) {
+    getCountSuitableType:function (groupSource, streamType, groupSourceId, groupStore) {
         var mix = groupStore.queryBy(function (record, id) {
-            if (record.get('groupId') == groupSource
-                && record.get('typeId') == streamType
-                && record.get('nagId') != groupSourceNagId) {
+            if (record.get('groupid') == groupSource
+                && record.get('typeid') == streamType
+                && record.get('id') != groupSourceId) {
                 return true;
             }
         });

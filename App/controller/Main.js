@@ -1,15 +1,16 @@
 ﻿Ext.define('App.controller.Main', {
     extend: 'Ext.app.Controller',
     views: [
+        'Viewport',
         'GroupGrid.Teacher'
         , 'GroupGrid.Room'
         , 'GroupGrid.Week'
         , 'GroupGrid.Grid'
         , 'StreamGrid.Grid'
-        , 'AudPanel'
+        // , 'AudPanel'
         , 'AudFieldset'
-        , 'StudyWorkTabPanel'
-        , 'Viewport'
+        // , 'StudyWorkTabPanel'
+
     ],
     models: [
         'ComboModel'
@@ -33,6 +34,7 @@
         , 'Teacher'
         , 'Week'
         , 'HourFact'
+        , 'Group'
         , 'GroupGrid.Grid'
         , 'StreamGrid.Grid'
 
@@ -68,28 +70,30 @@
     onLaunch: function () {
         var me = this;
 
-        me.getViewport().typeStore = this.getTypeStore();
-        me.getViewport().roomStore = this.getRoomStore();
-        me.getViewport().buildStore = this.getBuildStore();
-        me.getViewport().levelStore = this.getLevelStore();
-        me.getViewport().teacherStore = this.getTeacherStore();
-        me.getViewport().weekStore = this.getWeekStore();
-        me.getViewport().subjectStore = this.getSubjectStore();
+        var storeSubject = Ext.data.StoreManager.lookup('Subject');
+        storeSubject.on('load', me.onSubjectStoreLoad, me);
+        /*me.getViewport().typeStore = this.getTypeStore();
+         me.getViewport().roomStore = this.getRoomStore();
+         me.getViewport().buildStore = this.getBuildStore();
+         me.getViewport().levelStore = this.getLevelStore();
+         me.getViewport().teacherStore = this.getTeacherStore();
+         me.getViewport().weekStore = this.getWeekStore();
+         me.getViewport().subjectStore = this.getSubjectStore();*/
 
         // это нужно для того, чтобы при загрузки сторов аудиторий viewport они копировались в сторы viewport.audfieldset
-        me.getViewport().subjectStore.on('load', me.onSubjectStoreLoad, me);
-        me.getViewport().buildStore.on('load', me.onBuildStoreLoad, me);
-        me.getViewport().levelStore.on('load', me.onLevelStoreLoad, me);
-        me.getViewport().roomStore.on('load', me.onRoomStoreLoad, me);
-        me.getViewport().weekStore.on('load', me.onWeekStoreLoad, me);
+        /*
+         me.getViewport().buildStore.on('load', me.onBuildStoreLoad, me);
+         me.getViewport().levelStore.on('load', me.onLevelStoreLoad, me);
+         me.getViewport().roomStore.on('load', me.onRoomStoreLoad, me);
+         me.getViewport().weekStore.on('load', me.onWeekStoreLoad, me);*/
 
-        me.getStreamgrid().groupStore.on('load', me.onStreamGridLoad, me);
+        //me.getStreamgrid().groupStore.on('load', me.onStreamGridLoad, me);
         // me.getStreamgrid().store.on('beforeload', me.onStreamGridBeforeLoad, me);
 
         // здесь срабатывают свойства load
-        me.getViewport().buildStore.load();
-        me.getViewport().levelStore.load();
-        me.getViewport().weekStore.load();
+        /* me.getViewport().buildStore.load();
+         me.getViewport().levelStore.load();
+         me.getViewport().weekStore.load();*/
 
         me.getGroupgrid().store.on('load', me.onGroupgridLoad, me);
 
@@ -105,6 +109,7 @@
                     var viewport = combo.up('viewport'),
                         comboSubject = viewport.query('#subject')[0],
                         comboDivision = viewport.query('#division')[0],
+                        divid = comboDivision.getValue(),
                         groupGrid = viewport.query('groupgrid')[0],
                         comboPeriod = viewport.query('#period')[0],
                         comboGrade = viewport.query('#grade')[0],
@@ -117,15 +122,19 @@
 
                     comboPeriod.store.load({
                         params: {
-                            manid: manId,
-                            taskid: taskId
+                            manid: manid,
+                            taskid: taskid
                         }
                     });
-                    roomCombo.store = this.CopyStore(viewport.roomStore);
-
-                    teacherCombo.store = this.CopyStore(viewport.teacherStore);
-                    teacherCombo.store.clearFilter();
-                    teacherCombo.store.filter('divId', comboDivision.getValue());
+                    var storeTeacher = Ext.data.StoreManager.lookup('Teacher');
+                    storeTeacher.load();
+                    //roomCombo.store = this.CopyStore(viewport.roomStore);
+                    //teacherCombo.store = Ext.create('App.store.GroupGrid.Teacher');
+                    teacherCombo.store.load({params: {divid: divid}});
+                    roomCombo.store.load();
+                    /*teacherCombo.store = this.CopyStore(viewport.teacherStore);
+                     teacherCombo.store.clearFilter();
+                     teacherCombo.store.filter('divId', comboDivision.getValue());*/
 
                     //groupGrid.store.removeAll();
                 }
@@ -138,38 +147,31 @@
                         comboDivision = viewport.query('#division')[0],
                         division = comboDivision.getValue(),
                         comboSubject = viewport.query('#subject')[0],
-                        gridStream = viewport.query('audpanel #stream-grid')[0],
-                        gridGroup = viewport.query('audpanel #group-grid')[0];
+                        gridStream = viewport.query('#stream-grid')[0],
+                        gridGroup = viewport.query('#group-grid')[0];
 
                     comboGrade.reset();
-                    comboGrade.store.load();
-
                     comboSubject.reset();
 
-// todo разобраться почему при смене кафедры не показывается список предметов в комбо
-                    // тут срабатывает onSubjectStoreLoad
-                    viewport.subjectStore.load({
+                    var storeSubject = Ext.data.StoreManager.lookup('Subject');
+                    storeSubject.load({ //* для рендера грида потоков
                         params: {
                             studyId: studyId
                         }
                     });
-
-                    gridStream.groupStore.load({
+                    comboSubject.store.load({ //* для комбика предметов
+                        params: {
+                            studyId: studyId
+                        }
+                    });
+                    var storeGroup = Ext.data.StoreManager.lookup('Group');
+                    storeGroup.load({
                         params: {
                             studyId: studyId,
                             divId: division
                         }
                     });
 
-                    /*gridStream.store.load({params:{
-                     studyId:studyId,
-                     divId:division
-                     }});*/
-
-                    /*gridStream.teacherStore = this.CopyStore(viewport.teacherStore);
-                     gridStream.subjectStore = this.CopyStore(viewport.subjectStore);*/
-
-                    //gridStream.getView().refresh();
 
                     gridGroup.store.removeAll();
                 }
@@ -190,7 +192,7 @@
                     //comboSubject.store = this.CopyStore(viewport.subjectStore);
                     //console.log(comboSubject.store);
                     comboSubject.store.filter(function (rec, id) {
-                        if (rec.get('grade') == grade && rec.get('divId') == division)
+                        if (rec.get('grade') == grade && rec.get('divid') == division)
                             return true;
                     });
                 }
@@ -201,16 +203,16 @@
                         gridGroup = viewport.query('#group-grid')[0],
                         comboPeriod = viewport.query('#period')[0],
                         comboGrade = viewport.query('#grade')[0],
-                        //comboDivision = viewport.query('#division')[0],
+                    //comboDivision = viewport.query('#division')[0],
                         comboSubject = viewport.query('#subject')[0],
                         division = viewport.query('#division')[0].getValue();
 
                     gridGroup.store.load({
                         params: {
-                            studyId: comboPeriod.getValue(),
+                            studyid: comboPeriod.getValue(),
                             grade: comboGrade.getRawValue(),
-                            divId: division,
-                            subjectId: comboSubject.getValue()
+                            divid: division,
+                            subjectid: comboSubject.getValue()
                         }
                     });
                 }
@@ -226,13 +228,13 @@
                         arr = [],
                         streamGrid = Ext.ComponentQuery.query('streamgrid')[0],
                         streamGridSelectedRow = streamGrid.getSelected(),
-                        window = Ext.create('App.view.StreamGrid.Edit.Window'),
+                    //window = Ext.create('App.view.StreamGrid.Edit.Window'),
                         form = Ext.create('App.view.StreamGrid.Edit.Form');
 
 
                     // сформируем данные по группам для groupStore формы
-                    for (var i in streamGridSelectedRow.data['groupId']) {
-                        arr = [streamGridSelectedRow.data['nagId'][i], streamGridSelectedRow.data['groupId'][i]];
+                    for (var i in streamGridSelectedRow.data['groupid']) {
+                        arr = [streamGridSelectedRow.data['nagid'][i], streamGridSelectedRow.data['groupid'][i]];
                         data.push(arr);
                         //data.push(streamGridSelectedRow.data['groupId'][i].nagId, streamGridSelectedRow.data['groupId'][i].groupId);
                     }
@@ -252,9 +254,9 @@
                         room = form.query('#stream-grid-edit-room')[0],
                         tso = form.query('#stream-grid-edit-room-tso')[0];
 
-                    form.query('audfieldset #stream-grid-edit-room-build')[0].store = this.CopyAutoLoadStore(buildStore);
-                    form.query('audfieldset #stream-grid-edit-room-level')[0].store = this.CopyAutoLoadStore(levelStore);
-                    form.query('audfieldset #stream-grid-edit-room')[0].store = this.CopyStore(roomStore);
+                    form.query('audfieldset #stream-grid-edit-room-build')[0].store = Ext.data.StoreManager.lookup('Build');
+                    form.query('audfieldset #stream-grid-edit-room-level')[0].store = Ext.data.StoreManager.lookup('Level');
+                    form.query('audfieldset #stream-grid-edit-room')[0].store = Ext.data.StoreManager.lookup('Room');
 
                     // setReadOnly если есть список групп
                     if (grid.store.getCount()) {
@@ -269,29 +271,38 @@
 // todo добавление подгруппы в поток убрать, изменение типа не работает
                     // загрузка оставшихся данных в форму
                     form.loadRecord(record);
-                    //console.log(form.getForm().getRecord());
+                    var window = Ext.create('Ext.Window', {
+                        frame: true,
+                        title: 'Редактирование потока',
+                        width: 445,
+                        layout: 'fit'
+                    });
                     window.add([form]);
                     window.show();
-                    //streamGrid.getView().deselect(streamGridSelectedRow);
                 }
             },
             'streamgrid button[action=create]': {
                 click: function (button) {
                     console.log('action=create');
 
-                    var window = Ext.create('App.view.StreamGrid.Edit.Window');
+                    //var window = Ext.create('App.view.StreamGrid.Edit.Window');
                     var form = Ext.create('App.view.StreamGrid.Edit.Form');
-                    var buildStore = App.app.getController('Main').getViewport().buildStore,
-                        levelStore = App.app.getController('Main').getViewport().levelStore,
-                        roomStore = App.app.getController('Main').getViewport().roomStore;
+                    /*var buildStore = App.app.getController('Main').getViewport().buildStore,
+                     levelStore = App.app.getController('Main').getViewport().levelStore,
+                     roomStore = App.app.getController('Main').getViewport().roomStore;*/
 
-                    form.query('audfieldset #stream-grid-edit-room-build')[0].store = this.CopyAutoLoadStore(buildStore);
-                    form.query('audfieldset #stream-grid-edit-room-level')[0].store = this.CopyAutoLoadStore(levelStore);
-                    form.query('audfieldset #stream-grid-edit-room')[0].store = this.CopyStore(roomStore);
+                    form.query('audfieldset #stream-grid-edit-room-build')[0].store = Ext.data.StoreManager.lookup('Build');
+                    form.query('audfieldset #stream-grid-edit-room-level')[0].store = Ext.data.StoreManager.lookup('Level');
+                    form.query('audfieldset #stream-grid-edit-room')[0].store = Ext.data.StoreManager.lookup('Room');
 
                     // тип потока может быть лек, лаб или сем. Удаление КР...
                     //form.query('#stream-grid-edit-type')[0].store.removeAt(3,3);
-
+                    var window = Ext.create('Ext.Window', {
+                        frame: true,
+                        title: 'Редактирование потока',
+                        width: 445,
+                        layout: 'fit'
+                    });
                     window.add([form]);
                     window.show();
                 }
@@ -388,7 +399,7 @@
                     var columnHeader = gridview.ownerCt.columns[cellIndex].text;
                     // Колонка Факт для КР... : формирование нажимаемого стора в зависимости от цифр Факт в других строках того же типа
                     if (columnHeader == 'Факт') {
-                        var type = record.get('typeId'),
+                        var type = record.get('typeid'),
                             comboHourFact = gridview.ownerCt.query('#hourFact')[0].getEditor();
                         // для ГЭ, КП, КР
                         if (type == '4' || type == '5' || type == '6') {
@@ -396,8 +407,8 @@
                             var tempStoreAll = Ext.create('App.store.HourFact'),
                                 dataAll = new Array(),
                                 dataFiltered = new Array(),
-                                hourAll = record.get('hourAll'),
-                                groupName = record.get('groupName');
+                                hourAll = record.get('hourall'),
+                                groupName = record.get('groupname');
 
                             // заполним стор значениями
                             for (var i = 1; i <= hourAll; i++) {
@@ -414,14 +425,14 @@
                                     // валидация, чтобы сумма фактов часов по данному типу занятий была не больше Всего часов
                                     // возьмем другие записи данного типа для данной группы
                                     var cntMix = gridview.getBubbleTarget().store.queryBy(function (record, id) {
-                                        if (record.get('groupName') == groupName && record.get('typeId') == type) {
+                                        if (record.get('groupname') == groupName && record.get('typeid') == type) {
                                             return true;
                                         }
                                     });
                                     // просуммируем поле Часы-Факт
                                     var sum = 0;
                                     for (var i = 0; i < cntMix.getCount(); i++) {
-                                        sum += Number(cntMix.items[i].get('hourFact'));
+                                        sum += Number(cntMix.items[i].get('hourfact'));
                                     }
                                     sum += hourFact;
                                     // условие валидности - не больше, чем Всего
@@ -434,7 +445,7 @@
                             comboHourFact.setReadOnly(true);
                         }
                     }
-                    this.setColumnReadOnlys(cellIndex, record, gridview);
+                    //this.setColumnReadOnlys(cellIndex, record, gridview);
                 }
             },
 //todo сделать логирование для расписания
@@ -509,74 +520,72 @@
 
     // Функции срабатывающие при загрузке store
     onSubjectStoreLoad: function (store) {
-        // скопируем subjectStore и прикрепим его к gridStream
-        this.getStreamgrid().subjectStore = this.CopyStore(store);
-        this.getStreamgrid().store.sort();
-
-        var comboSubject = this.getViewport().query('#subject')[0];
-        comboSubject.store = this.CopyStore(store);
-        console.log('onSubjectStoreLoad');
-    },
-    onBuildStoreLoad: function (store) {
-        // скопируем buildStore и прикрепим его к Viewport
-        this.getViewport().query('audfieldset #stream-grid-edit-room-build')[0].store = this.CopyAutoLoadStore(store);
-        //console.log(store, this.getViewport().query('audfieldset #stream-grid-edit-room-build')[0].store);
-    },
-    onLevelStoreLoad: function (store) {
-        // скопируем levelStore и прикрепим его к Viewport
-        this.getViewport().query('audfieldset #stream-grid-edit-room-level')[0].store = this.CopyAutoLoadStore(store);
-    },
-    onRoomStoreLoad: function (store) {
-        // скопируем roomStore и прикрепим его к Viewport
-        this.getViewport().query('audfieldset #stream-grid-edit-room')[0].store = this.CopyStore(store);
-    },
-    onWeekStoreLoad: function (store) {
-        // скопируем weekStore и прикрепим его к Viewport
-        //console.log(this.getViewport().query('groupgrid #jointBegin'));
-        this.getViewport().query('groupgrid #jointBegin')[0].getEditor().store = this.CopyStore(store);
-        this.getViewport().query('groupgrid #jointEnd')[0].getEditor().store = this.CopyStore(store);
-    },
+        this.getStreamgrid().store.load({
+            params: {
+                studyid: Ext.ComponentQuery.query('#period')[0].getValue(),
+                divid: Ext.ComponentQuery.query('#division')[0].getValue()
+            }});
+     },/*
+     onBuildStoreLoad: function (store) {
+     // скопируем buildStore и прикрепим его к Viewport
+     this.getViewport().query('audfieldset #stream-grid-edit-room-build')[0].store = this.CopyAutoLoadStore(store);
+     //console.log(store, this.getViewport().query('audfieldset #stream-grid-edit-room-build')[0].store);
+     },
+     onLevelStoreLoad: function (store) {
+     // скопируем levelStore и прикрепим его к Viewport
+     this.getViewport().query('audfieldset #stream-grid-edit-room-level')[0].store = this.CopyAutoLoadStore(store);
+     },
+     onRoomStoreLoad: function (store) {
+     // скопируем roomStore и прикрепим его к Viewport
+     this.getViewport().query('audfieldset #stream-grid-edit-room')[0].store = this.CopyStore(store);
+     },
+     onWeekStoreLoad: function (store) {
+     // скопируем weekStore и прикрепим его к Viewport
+     //console.log(this.getViewport().query('groupgrid #jointBegin'));
+     this.getViewport().query('groupgrid #jointBegin')[0].getEditor().store = this.CopyStore(store);
+     this.getViewport().query('groupgrid #jointEnd')[0].getEditor().store = this.CopyStore(store);
+     },*/
     // запускается после загрузки streamgrid.groupStore
-    onStreamGridLoad: function (store) {
-        var viewport = this.getViewport(),
-            gridStream = this.getViewport().query('streamgrid')[0],
-            comboPeriod = viewport.query('#period')[0],
-            studyId = comboPeriod.getValue(),
-            comboDivision = viewport.query('#division')[0],
-            division = comboDivision.getValue();
+    /*  onStreamGridLoad: function (store) {
+     var viewport = this.getViewport(),
+     gridStream = this.getViewport().query('streamgrid')[0],
+     comboPeriod = viewport.query('#period')[0],
+     studyId = comboPeriod.getValue(),
+     comboDivision = viewport.query('#division')[0],
+     division = comboDivision.getValue();
 
-        gridStream.store.load({params: {
-            studyId: studyId,
-            divId: division
-        }});
-        gridStream.teacherStore = this.CopyStore(viewport.teacherStore);
-        gridStream.subjectStore = this.CopyStore(viewport.subjectStore);
-    },
+     gridStream.store.load({params: {
+     studyId: studyId,
+     divId: division
+     }});
+     gridStream.teacherStore = this.CopyStore(viewport.teacherStore);
+     gridStream.subjectStore = this.CopyStore(viewport.subjectStore);
+     },
 
-    // запускается перед загрузкой streamgrid.store
-    onStreamGridBeforeLoad: function (store) {
-        var viewport = this.getViewport(),
-            gridStream = this.getViewport().query('streamgrid')[0],
-            comboPeriod = viewport.query('#period')[0],
-            studyId = comboPeriod.getValue(),
-            comboDivision = viewport.query('#division')[0],
-            division = comboDivision.getValue();
-        //console.log(studyId, division);
-        /*gridStream.groupStore.load({
-         params:{
-         studyId:studyId,
-         divId:division
-         }
-         });*/
+     // запускается перед загрузкой streamgrid.store
+     onStreamGridBeforeLoad: function (store) {
+     var viewport = this.getViewport(),
+     gridStream = this.getViewport().query('streamgrid')[0],
+     comboPeriod = viewport.query('#period')[0],
+     studyId = comboPeriod.getValue(),
+     comboDivision = viewport.query('#division')[0],
+     division = comboDivision.getValue();
+     //console.log(studyId, division);
+     *//*gridStream.groupStore.load({
+     params:{
+     studyId:studyId,
+     divId:division
+     }
+     });*//*
 
-        /*gridStream.store.load({params:{
-         studyId:studyId,
-         divId:division
-         }});*/
+     *//*gridStream.store.load({params:{
+     studyId:studyId,
+     divId:division
+     }});*//*
 
-        /*gridStream.teacherStore = this.CopyStore(viewport.teacherStore);
-         gridStream.subjectStore = this.CopyStore(viewport.subjectStore);*/
-    },
+     *//*gridStream.teacherStore = this.CopyStore(viewport.teacherStore);
+     gridStream.subjectStore = this.CopyStore(viewport.subjectStore);*//*
+     },*/
 
     CopyStore: function (store1) {
         var records = [],
@@ -627,50 +636,50 @@
         //store.sync();
     },
 
-    getTypeStore: function () {
-        var store = Ext.create('App.store.Type');
-        return store;
-    },
-    getTeacherStore: function () {
-        var store = Ext.create('App.store.Teacher');
-        store.load();
-        return store;
-    },
+    /* getTypeStore: function () {
+     var store = Ext.create('App.store.Type');
+     return store;
+     },
+     getTeacherStore: function () {
+     var store = Ext.create('App.store.Teacher');
+     store.load();
+     return store;
+     },
 
-    getBuildStore: function () {
-        var store = Ext.create('App.store.Build');
-        return store;
-    },
+     getBuildStore: function () {
+     var store = Ext.create('App.store.Build');
+     return store;
+     },
 
-    getLevelStore: function () {
-        var store = Ext.create('App.store.Level');
-        return store;
-    },
+     getLevelStore: function () {
+     var store = Ext.create('App.store.Level');
+     return store;
+     },
 
-    getRoomStore: function () {
-        var store = Ext.create('App.store.Room');
-        store.load();
-        return store;
-    },
+     getRoomStore: function () {
+     var store = Ext.create('App.store.Room');
+     store.load();
+     return store;
+     },
 
-    getWeekStore: function () {
-        var weeks = [],
-            arr = [];
-        for (var i = 1; i < 19; i++) {
-            arr = {'ID': i, 'NAME': i};
-            weeks.push(arr);
-        }
+     getWeekStore: function () {
+     var weeks = [],
+     arr = [];
+     for (var i = 1; i < 19; i++) {
+     arr = {'ID': i, 'NAME': i};
+     weeks.push(arr);
+     }
 
-        var store = Ext.create('App.store.Week', {data: weeks});
-        store.load();
+     var store = Ext.create('App.store.Week', {data: weeks});
+     store.load();
 
-        return store;
-    },
+     return store;
+     },
 
-    getSubjectStore: function () {
-        var store = Ext.create('App.store.Subject');
-        return store;
-    },
+     getSubjectStore: function () {
+     var store = Ext.create('App.store.Subject');
+     return store;
+     },*/
 
     // Фильтрация Этаж
     filterLevel: function (combo, build) {
@@ -697,7 +706,7 @@
             tsoCheckboxValue = tsoCheckbox.getValue();
 
         roomCombo.clearValue();
-
+        roomStore.clearFilter();
         switch (action) {
             case 'delete':
                 switch (type) {
@@ -723,7 +732,8 @@
                     case 'tso':
                         roomStore.filter(function (rec, id) {
                             var build = rec.get('build'),
-                                level = rec.get('level');
+                                level = rec.get('lvl');
+
                             if ((level == levelId || !levelId)
                                 && (build == buildId || !buildId)) {
                                 return true;
@@ -741,7 +751,7 @@
                 switch (type) {
                     case 'build':
                         roomStore.filter(function (rec, id) {
-                            var level = rec.get('level'),
+                            var level = rec.get('lvl'),
                                 build = rec.get('build'),
                                 tso = rec.get('tso');
                             if ((level == levelId || !levelId)
@@ -753,7 +763,7 @@
                         break;
                     case 'level':
                         roomStore.filter(function (rec, id) {
-                            var level = rec.get('level'),
+                            var level = rec.get('lvl'),
                                 build = rec.get('build'),
                                 tso = rec.get('tso');
                             if (level == levelId
@@ -765,7 +775,7 @@
                         break;
                     case 'tso':
                         roomStore.filter(function (rec, id) {
-                            var level = rec.get('level'),
+                            var level = rec.get('lvl'),
                                 build = rec.get('build'),
                                 tso = rec.get('tso');
                             if ((level == levelId || !levelId)
@@ -789,11 +799,11 @@
     // GroupGrid: установка на некоторые ячейки свойства readOnly
     setColumnReadOnlys: function (cellIndex, record, gridview) {
         var stream = record.get('stream'),
-            type = record.get('typeId'),
+            type = record.get('typeid'),
             comboTeacher = gridview.getBubbleTarget().query('#teacher')[0].getEditor(),
             comboRoom = gridview.getBubbleTarget().query('#room')[0].getEditor(),
-            comboJointBegin = gridview.getBubbleTarget().query('#jointBegin')[0].getEditor(),
-            comboJointEnd = gridview.getBubbleTarget().query('#jointEnd')[0].getEditor();
+            comboJointBegin = gridview.getBubbleTarget().query('#jointbegin')[0].getEditor(),
+            comboJointEnd = gridview.getBubbleTarget().query('#jointend')[0].getEditor();
         // запреты на редактирование ячеек для занятий, которые в потоке
         if (stream && stream != '0') {
             switch (cellIndex) {

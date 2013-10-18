@@ -1,12 +1,12 @@
 // константы
 
-var manId = "70878";
-var taskId = "9";
+var manid = "70878";
+var taskid = "9";
 //var divId = "146";
 //var divName = "Кафедра Стартовая";
 
 // таблицы нагрузки
-var nagruzka = "nagruzka_vpgroup";
+var nagruzka = "nagruzka_26092013";
 /*var nagruzka_lec = "nagruzka_30032013_lec";
 var nagruzka_labs = "nagruzka_30032013_labs";
 var nagruzka_sem = "nagruzka_30032013_sem";*/

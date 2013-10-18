@@ -2,7 +2,7 @@
     extend:'Ext.app.Controller',
     views:[
         'StreamGrid.Edit.Form'
-        , 'StreamGrid.Edit.Window'
+       // , 'StreamGrid.Edit.Window'
     ],
     models:[
         'ComboModel'
@@ -50,28 +50,28 @@
                         // * отдельно формируем массивы для groupId & nagId
                             formGroupIdArr = [],
                             formNagIdArr = [];
-
+// TODO formGroup = formGroupStore.data.items, поменять на getRange()
                         if (record) {  // обновление, возможно только если есть группы
                             console.log('изменили поток');
                             // * отдельно возьмем стор грида, т.к. form.getValues его не берет
                             // * формируем массив групп из стора формы
                             for (var i in formGroup) {
-                                formGroupIdArr.push(formGroup[i].data.groupId);
-                                formNagIdArr.push(formGroup[i].data.nagId);
+                                formGroupIdArr.push(formGroup[i].data.groupid);
+                                formNagIdArr.push(formGroup[i].data.nagid);
                             }
                             // * значения из формы присваиваем гриду потоков
-                            values['groupId'] = formGroupIdArr;
-                            values['nagId'] = formNagIdArr;
+                            values['groupid'] = formGroupIdArr;
+                            values['nagid'] = formNagIdArr;
 
                             // * массив nagId удаленных  групп
-                            var compareArrays = streamGrid.compareArrays(record.data['nagId'], formNagIdArr);
+                            var compareArrays = streamGrid.compareArrays(record.data['nagid'], formNagIdArr);
                             // * если снимают чекер ТСО, то он пропадает вообще из values, поэтому если tso не найдено, значит оно не отмечено
                             if (!values['tso']) {
                                 values['tso'] = "";
                             }
 
                             // * если явно указана аудитория, то признаки ТСО, корпус и этаж не сохраняем
-                            if (values['roomId'][0] != "" && values['roomId'] != "") {
+                            if (values['roomid'][0] != "" && values['roomid'] != "") {
                                 values['tso'] = "";
                                 values['build'] = "";
                                 values['level'] = "";
@@ -92,9 +92,9 @@
                                     var obj = Ext.decode(response.responseText),
                                         stream = obj.stream;
                                     //var stream = batch.operations[0].request.scope.reader.jsonData["stream"];
-                                    values['groupId'] = [];
-                                    values['raspredId'] = [];
-                                    values['nagId'] = [];
+                                    values['groupid'] = [];
+                                    values['raspredid'] = [];
+                                    values['nagid'] = [];
                                     values['stream'] = stream;
                                     // * создаю модель со значениями из формы и вставляю их в стор
                                     var rec = Ext.create('App.model.StreamGridModel', values);
@@ -157,7 +157,7 @@
                 // сохраняем перемещаемую запись в переменную droppedRecords, очищаем список перемещаемых записей
                 beforedrop:function (node, data, overModel, dropPos, opts) {
                     console.log('beforedrop');
-                    console.log(data.records);
+                   // console.log(data.records);
                     // todo тут хрень какая-то: data.records показывает старое значение.
                     this.droppedRecords = data.records;
                     data.records = [];
@@ -215,7 +215,6 @@
                     }
                 }
             },
-
             'streamgrideditform #stream-grid-edit-room-tso':{
                 change:function (me, newValue, oldValue, eOpts) {
                     // отфильтруем поле Аудитории
@@ -225,10 +224,8 @@
                     } else {
                         this.filterRooms(roomCombo, 'tso', 'delete');
                     }
-
                 }
             },
-
             'streamgrideditform #stream-grid-edit-room-build':{
                 // возможность очистки полей нажатием DELETE
                 specialkey:function (field, e) {
@@ -252,7 +249,6 @@
                     this.filterLevel(levelCombo, records[0].data['id']);
                 }
             },
-
             'streamgrideditform #stream-grid-edit-room-level':{
                 // возможность очистки полей нажатием DELETE
                 specialkey:function (field, e) {

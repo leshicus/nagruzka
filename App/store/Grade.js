@@ -1,7 +1,7 @@
 Ext.define('App.store.Grade', {
     extend: 'Ext.data.Store',
     model: 'App.model.ComboModel',
-   //autoLoad: true,
+    autoLoad: true,
     proxy: {
         type: 'rest',
         url: 'php/getGrade.php',

@@ -1,7 +1,7 @@
 <?
 require_once("./../include.php");
 
-$typeId = $_REQUEST['typeId'];
+$typeId = $_REQUEST['typeid'];
 
 switch ($typeId) {
     case '1':
@@ -21,19 +21,18 @@ switch ($typeId) {
 }
 
 try {
-    $result = oci_parse($conn, $query_id);
-    if (!(oci_execute($result))) throw new Exception;
-    while ($row = oci_fetch_array($result, OCI_ASSOC)) {
-        $output[] = $row;
-    }
-    oci_free_statement($result);
-    echo json_encode(array('success' => true, 'id' => $output[0]['ID']));
+    $result = execq($query, false);
+    foreach ($result as $i => $data)
+        foreach ($data as $k => $v)
+            $output[$i][strtolower($k)] = $v;
 } catch (Exception $e) {
+    $success = false;
     echo json_encode(
-        array('success' => false,
+        array('success' => $success,
             'message' => $query));
 }
+if ($success) {
+    echo '{rows:' . json_encode($output) . '}';
+}
 
-if ($conn)
-    oci_close($conn);
 ?>

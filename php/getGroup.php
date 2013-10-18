@@ -1,24 +1,24 @@
-<?php
+<?
 require_once("../include.php");
 
-$manid = $_REQUEST['manid'];
-$taskid = $_REQUEST['taskid'];
+$studyId = $_REQUEST['studyId'];
+$divid = $_REQUEST['divId'];
+$nagruzka = $_REQUEST['nagruzka'];
 
 $query = "
-	select V.STUDYID as ID,
-           V.YEARNAME || ' ' || V.PERIODNAME as NAME
-        from V_STUDY      V,
-             STUDY_ACCESS A
-        where V.arhiv <> 1
-        and   V.studyid in A.studyid
-        and   A.manid = '$manid'
-        and   A.taskid = '$taskid'
-        order by V.studyid
+		select distinct
+              gr.groid   as ID,
+              gr.grocode as NAME
+        from $nagruzka t,
+             groups    gr
+        where t.studyid = '$studyId'
+        and   t.divid   = '$divid'
+        and   gr.groid = t.groid
+        order by gr.groid
 	";
 
 try {
     $result = execq($query, false);
-
     foreach ($result as $i => $data)
         foreach ($data as $k => $v)
             $output[$i][strtolower($k)] = $v;
@@ -31,5 +31,6 @@ try {
 if ($success) {
     echo '{rows:' . json_encode($output) . '}';
 }
+
 
 ?>

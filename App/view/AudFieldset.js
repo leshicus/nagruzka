@@ -1,14 +1,11 @@
 ﻿Ext.define('App.view.AudFieldset', {
     extend:'Ext.form.FieldSet',
     alias:'widget.audfieldset',
-
     layout: 'fit',
-
     initComponent:function () {
         console.log('Init AudFieldset');
 
         this.items = [
-
                 {
                     xtype:'checkboxfield',
                     boxLabel:'ТСО',
@@ -33,7 +30,8 @@
                             valueField:'id',
                             displayField:'name',
                             name:'build',
-                            fieldLabel:'Корпус'
+                            fieldLabel:'Корпус',
+                            store:'Build'
                         },
                         {
                             xtype:'combo',
@@ -48,7 +46,8 @@
                             valueField:'id',
                             displayField:'name',
                             name:'level',
-                            fieldLabel:'Этаж'
+                            fieldLabel:'Этаж',
+                            store:'Level'
                         }
                     ]
                 },
@@ -56,7 +55,7 @@
                     xtype:'combo',
                     itemId:'stream-grid-edit-room',
                     margin:'5 0 0 0',
-                    name:'roomId',
+                    name:'roomid',
                     valueField:'id',
                     displayField:'name',
                     queryMode:'local',
@@ -66,7 +65,8 @@
                     labelWidth:65,
                     width:205,
                     fieldLabel:'Аудитории',
-                    renderer:Ext.util.Format.comboRenderer('stream-grid-edit-room')
+                    renderer:Ext.util.Format.comboRenderer('stream-grid-edit-room'),
+                    store:'Room'
                 }
 
         ];

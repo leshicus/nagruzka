@@ -1,8 +1,7 @@
 <?
 require_once("./../include.php");
 
-try {
-    $query = "
+$query = "
 		select
            v.divId     as ID,
            v.divabbreviate   as NAME
@@ -10,17 +9,21 @@ try {
         order by v.divabbreviate
 	";
 
-    $result = oci_parse($conn, $query);
+try {
+    $result = execq($query, false);
+    foreach ($result as $i => $data)
+        foreach ($data as $k => $v)
+            $output[$i][strtolower($k)] = $v;
+} catch (Exception $e) {
+    $success = false;
+    echo json_encode(
+        array('success' => $success,
+            'message' => $query));
+}
 
-    if (!(oci_execute($result))) throw new Exception;
-    while ($row = oci_fetch_array($result, OCI_ASSOC)) {
-        $output[] = $row;
-    }
-    oci_free_statement($result);
+if ($success) {
 
     echo '{rows:' . json_encode($output) . '}';
-} catch (Exception $e) {
-    echo json_encode(array('success' => false, 'error' => $e));
 }
 
 ?>

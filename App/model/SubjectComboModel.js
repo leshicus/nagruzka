@@ -1,27 +1,12 @@
 Ext.define('App.model.SubjectComboModel', {
     extend:'Ext.data.Model',
     fields:[
-        {
-            name:'id',
-            mapping:'ID'
-        },
-
-        {
-            name:'name',
-            mapping:'NAME'
-        },
-        {
-            name:'grade',
-            mapping:'GRADE'
-        },
-        {
-            name:'divId',
-            mapping:'DIVID'
-        },
-        {
-            name:'nagId',
-            mapping:'NAGID'
-        }
+        {name:'id'},
+        {name:'name'},
+        {name:'grade'},
+        {name:'divid'},
+        {name:'nagid'}
     ],
-    idProperty:'nagId'
+    idProperty:'nagid'  // * явное указание что только nagid уникален,
+    // иначе теряется id=1113 (базы данных для 2 и 3 курсов- предмет, который читают на разных курсах)
 });

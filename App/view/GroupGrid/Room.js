@@ -7,7 +7,7 @@
     valueField:'id',
     displayField:'name',
     multiSelect: true,
-
+    store: Ext.create('App.store.Room'),
     initComponent:function () {
         console.log('Init GroupGridRoom');
 

@@ -8,7 +8,11 @@ Ext.define('App.store.Room', {
         reader: {
             type: 'json',
             root: 'rows'
+        },
+        writer: {
+            type: 'json',
+            allowSingle:false
         }
     }
-    //,autoLoad: true
+    ,autoLoad: true
 });

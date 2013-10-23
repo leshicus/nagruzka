@@ -1,301 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/App/view/GroupGrid/Grid.js" line="305" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/App/view/GroupGrid/Grid.js" line="296" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="36014a95-449e-411f-945f-8fd605f19511" name="Default" comment="" />
     <ignored path="nagruzka.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Main.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381945869844" ignored="false" />
-    <file path="/a.dummy" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382037366846" ignored="false" />
-    <file path="dbtable:/6938804d/77d95072-fc69-45f4-a450-1d97b85e21d9/transoil..activity" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379508358888" ignored="false" />
-    <file path="dbtable:/6938804d/77d95072-fc69-45f4-a450-1d97b85e21d9/transoil..answer" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379177664672" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/php/syncGridDoctype.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379582160949" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/manage/ToolbarC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379612259482" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/Viewport.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381160310905" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/Viewport.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379083406371" ignored="false" />
-    <file path="/ToolbarC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379607002758" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/index.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382003727389" ignored="false" />
-    <file path="/index.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381478029527" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/manage/GridQuestionC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379087355023" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/manage/PanelQuestionV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379083985551" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/PanelQuestionV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380729878799" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/app.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379614048725" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/GridQuestionV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380370415372" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/manage/PanelQuestionC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380881499713" ignored="false" />
-    <file path="/GridQuestionV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379173600420" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/Tree.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379088762815" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/TreeQuestion.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379089356055" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/TreeQuestionV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380717680636" ignored="false" />
-    <file path="/PanelQuestionV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380269481219" ignored="false" />
-    <file path="/TreeQuestionV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379441858634" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/manage/TreeQuestionS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380553135797" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/manage/getTreeQuestion.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380982252218" ignored="false" />
-    <file path="/getTreeQuestion.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379148358738" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/db_connect.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379140802422" ignored="false" />
-    <file path="dbtable:/6938804d/77d95072-fc69-45f4-a450-1d97b85e21d9/transoil..group" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379605143991" ignored="false" />
-    <file path="dbtable:/6938804d/77d95072-fc69-45f4-a450-1d97b85e21d9/transoil..know" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379144327441" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/1.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379666593811" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/GridAnswersV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379151071133" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/GridAnswerV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379431341109" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/vars.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379678565741" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/manage/GridQuestionS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380553073398" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/manage/GridAnswerS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380630345554" ignored="false" />
-    <file path="dbtable:/6938804d/77d95072-fc69-45f4-a450-1d97b85e21d9/transoil..question" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379606877043" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/model/manage/GridQuestionM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379430342149" ignored="false" />
-    <file path="/dummy.sql" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379507305444" ignored="false" />
-    <file path="/a.sql" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379516590239" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/model/manage/GridAnswerM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379502564329" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/manage/syncGridQuestion.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379430575003" ignored="false" />
-    <file path="/syncGridQuestion.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379347363717" ignored="false" />
-    <file path="/GridQuestionM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379156998506" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/1.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379177393013" ignored="false" />
-    <file path="/PanelQuestionC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380633500831" ignored="false" />
-    <file path="/vars.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382038411167" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/resources/style.css" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381749954753" ignored="false" />
-    <file path="/style.css" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381749878103" ignored="false" />
-    <file path="/GridAnswerV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379186200541" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/manage/syncGridAnswer.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379430666024" ignored="false" />
-    <file path="/syncGridAnswer.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379316984042" ignored="false" />
-    <file path="/GridAnswerM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379345890421" ignored="false" />
-    <file path="/GridAnswerS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379185138398" ignored="false" />
-    <file path="$PROJECT_DIR$/../auditor_full/App/view/GridAuditor.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379415538814" ignored="false" />
-    <file path="$PROJECT_DIR$/../auditor_full/php/syncGrid.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379416338414" ignored="false" />
-    <file path="/syncGrid.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381916359860" ignored="false" />
-    <file path="$PROJECT_DIR$/../auditor_full/var.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379418116097" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/PanelBalanceV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379671366704" ignored="false" />
-    <file path="dbtable:/6938804d/77d95072-fc69-45f4-a450-1d97b85e21d9/transoil..speciality" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379501275028" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/manage/PanelSpecialityC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379501421663" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/manage/PanelSpecC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380633631398" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/model/manage/GridSpecM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379507311175" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/manage/GridSpecS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380970831539" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/manage/TreeSpecS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380553006056" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/TreeSpecV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380717671474" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/GridSpecV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380370426804" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/PanelSpecV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380269502434" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/manage/getTreeSpec.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380982218227" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/manage/syncGridSpec.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379605025535" ignored="false" />
-    <file path="/syncGridSpec.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379605024370" ignored="false" />
-    <file path="/PanelSpecC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380631739170" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/manage/PanelActC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379608004157" ignored="false" />
-    <file path="/PanelActC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379607912823" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/model/manage/GridActM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380898321542" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/manage/GridActS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380553048368" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/GridActV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380730976616" ignored="false" />
-    <file path="/syncGridAct.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379604984069" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/manage/syncGridAct.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380730175295" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/PanelActV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379512999076" ignored="false" />
-    <file path="/GridActV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380730925813" ignored="false" />
-    <file path="/a.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380899786346" ignored="false" />
-    <file path="/a.coffee" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379522506726" ignored="false" />
-    <file path="/a.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379522508853" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/manage/PanelGroupC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380633415939" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/model/manage/GridGroupM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379522712755" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/manage/GridGroupS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380553076821" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/GridGroupV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380731023104" ignored="false" />
-    <file path="/GridGroupV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380731022407" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/manage/syncGridGroup.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379525186443" ignored="false" />
-    <file path="/syncGridGroup.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379525175053" ignored="false" />
-    <file path="/PanelGroupC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380633330516" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/index.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379664802644" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/view/Viewport.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379670581726" ignored="false" />
-    <file path="/Viewport.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381316243023" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/view/GridPurposeV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379578642725" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/store/GridPurposeS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379580229027" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/store/Room.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379579682830" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/model/ComboModel.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379579708675" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/view/Faculty.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379579790023" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/view/Group.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379579914237" ignored="false" />
-    <file path="/Group.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379579881311" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/store/Faculty.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379579907732" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/store/GroupS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379580365345" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/view/FacultyV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379598740759" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/model/GridListM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380028173714" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/store/PeriodS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379580339890" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/view/PeriodV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379598796185" ignored="false" />
-    <file path="/PeriodV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379580389049" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/controller/Main.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379665191371" ignored="false" />
-    <file path="/include.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381909290587" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/include.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381395519015" ignored="false" />
-    <file path="$PROJECT_DIR$/../auditor_full/include.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380288276271" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/php/getPeriod.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379584687143" ignored="false" />
-    <file path="/getPeriod.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379584591852" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/php/getFaculty.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379665816244" ignored="false" />
-    <file path="/getGroup.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379599722026" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/php/getGroup.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379599727254" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/php/getGridList.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379583645803" ignored="false" />
-    <file path="/getGridList.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379583638363" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/php/getList.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381395433993" ignored="false" />
-    <file path="/getList.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380028146105" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/store/GridListS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379598855032" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/view/GroupV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379598755395" ignored="false" />
-    <file path="/FacultyV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379598721329" ignored="false" />
-    <file path="/GridListS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379598852625" ignored="false" />
-    <file path="/getFaculty.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379599532324" ignored="false" />
-    <file path="$PROJECT_DIR$/../dispetchPrepodExam/App/view/GridListV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380028386706" ignored="false" />
-    <file path="/GridListV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379600843553" ignored="false" />
-    <file path="$PROJECT_DIR$/../auditor_full/App/view/Viewport.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379670865967" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/include.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381944500115" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/PanelAuthC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379610574701" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/TabpanelAuthC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380970880587" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/TabpanelAuthV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380633654772" ignored="false" />
-    <file path="/TabpanelAuthV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379614944413" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/TabAuthV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381420821913" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/TabRegV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381420681939" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/ToolbarV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379612150296" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/manage/ToolbarManageV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380981391421" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/manage/ToolbarManageC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380981685644" ignored="false" />
-    <file path="/TabAuthV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380640290293" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/App/controller/Main.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380786492983" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/php/getSource.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380211603612" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/php/getTarget.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379667943018" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/App/view/Tree.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380789413436" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/App/view/Viewport.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379669622796" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/include.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380877473960" ignored="false" />
-    <file path="/getSource.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379667528265" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/Viewport.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381152989991" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/GridMovementsV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382024464348" ignored="false" />
-    <file path="/GridMovementsV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381152772518" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/GridBalanceMovementsV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379671446198" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/GridBalanceV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379671449526" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/GridNomenclatureV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381152919158" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/GridMolV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379671147457" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/GridLocationV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379671154089" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/GridPurposeV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379671160323" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/GridDoctypeV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379671165859" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/GridReasonV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379671174640" ignored="false" />
-    <file path="/PanelBalanceV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1379671255596" ignored="false" />
-    <file path="/TabpanelAuthC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380904840910" ignored="false" />
-    <file path="/TabRegV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380006938781" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/register.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381156326111" ignored="false" />
-    <file path="/register.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381156197354" ignored="false" />
-    <file path="dbtable:/6938804d/77d95072-fc69-45f4-a450-1d97b85e21d9/transoil..user" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380009450794" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/auth.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381156584877" ignored="false" />
-    <file path="/auth.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380733624069" ignored="false" />
-    <file path="dbtable:/6938804d/77d95072-fc69-45f4-a450-1d97b85e21d9/transoil..role" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380557149059" ignored="false" />
-    <file path="/ToolbarManageC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380269217914" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/php/getBalance.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380207183026" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/vars.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382038411167" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/include.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380540543271" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/TabPasChangeV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380301810178" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/changePassword.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381156352864" ignored="false" />
-    <file path="/changePassword.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381156339751" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/lib.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380362715764" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/admin/ToolbarAdminV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380981826870" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/admin/ToolbarAdminC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380981633133" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/app.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382027993449" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/admin/TreeUserV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380717662125" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/admin/GridUserV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381153041595" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/model/admin/GridUserM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380697196990" ignored="false" />
-    <file path="/syncGridUser.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380986403993" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/admin/syncGridUser.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380986420270" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/admin/TreeUserS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380555995416" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/admin/GridUserS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380985813921" ignored="false" />
-    <file path="/ToolbarAdminC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380966937314" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/manage/PanelUserC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380371019494" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/admin/PanelUserC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381149178376" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/admin/PanelUserV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380550239826" ignored="false" />
-    <file path="/PanelUserC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381148978220" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/view/FormMovements.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382023914848" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/controller/GridReasonC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380540638845" ignored="false" />
-    <file path="/FormMovements.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380541547214" ignored="false" />
-    <file path="/TreeUserS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380552659759" ignored="false" />
-    <file path="/TreeQuestionS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380553000335" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/manage/ComboManidS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380553042695" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/admin/getTreeUser.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380982127483" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/admin/ComboRoleS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380629729809" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/admin/getManid.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380609446496" ignored="false" />
-    <file path="/getManid.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380609313146" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/admin/getRole.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380609582167" ignored="false" />
-    <file path="/getRole.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380609581801" ignored="false" />
-    <file path="/GridUserV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381153041100" ignored="false" />
-    <file path="/app.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381476628124" ignored="false" />
-    <file path="/GridUserM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380649434986" ignored="false" />
-    <file path="/Tree.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380700585783" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/var.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380713735352" ignored="false" />
-    <file path="/var.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381391881362" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/admin/PanelClassC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381431782756" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/admin/GridExamV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380970123296" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/admin/GridSigngroupV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380970626844" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/admin/GridPersonV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381497143426" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/model/admin/GridExamM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380801407422" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/model/admin/GridSigngroupM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380906207473" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/model/admin/GridPersonM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380987267395" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/admin/GridExamS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380970529661" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/admin/GridSigngroupS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380970524613" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/admin/GridPersonS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380984217492" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/admin/PanelClassV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381567200941" ignored="false" />
-    <file path="/PanelClassV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381567200514" ignored="false" />
-    <file path="/GridSigngroupV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380737723765" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/App/instruction.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380784793828" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/instruction.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380787458403" ignored="false" />
-    <file path="$PROJECT_DIR$/../zamzav/ico.css" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380789281835" ignored="false" />
-    <file path="/ico.css" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380789281835" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/admin/syncGridExam.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381246477532" ignored="false" />
-    <file path="/syncGridExam.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380967426277" ignored="false" />
-    <file path="/PanelClassC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380988563483" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/admin/syncGridSigngroup.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380906407483" ignored="false" />
-    <file path="/syncGridSigngroup.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380906368426" ignored="false" />
-    <file path="/Dummy.txt" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382004124704" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/admin/syncGridPerson.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380988791111" ignored="false" />
-    <file path="/syncGridPerson.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380988442486" ignored="false" />
-    <file path="/GridPersonV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381330540752" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/setUserid.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380904068850" ignored="false" />
-    <file path="/setUserid.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380898910718" ignored="false" />
-    <file path="/a.html" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380899790229" ignored="false" />
-    <file path="/GridExamV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380960381835" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/controller/GridMovementsC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381412501666" ignored="false" />
-    <file path="/GridMovementsC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380961933614" ignored="false" />
-    <file path="/ToolbarAdminV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380981797724" ignored="false" />
-    <file path="/GridPersonM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1380987258893" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/php/syncGridMovements.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381152311685" ignored="false" />
-    <file path="/syncGridMovements.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381152308581" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/App/model/GridMovementsM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382024239902" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/.idea/workspace.xml" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381997099424" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/user/ToolbarUserC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381246791921" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/user/ToolbarUserV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381160152634" ignored="false" />
-    <file path="/ToolbarUserC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381246687201" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/js/testing/main.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381161741121" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/js/testing/store.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381161250852" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/user/PanelTestV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382082120997" ignored="false" />
-    <file path="/PanelTestV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382081964356" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/1.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381246974373" ignored="false" />
-    <file path="/Grid.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381753274285" ignored="false" />
-    <file path="/StudyWorkTabPanel.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381310594775" ignored="false" />
-    <file path="/AudFieldset.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381321336531" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/controller/user/PanelTestC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382038525677" ignored="false" />
-    <file path="/PanelTestC.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382038518872" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/user/setExam.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381430094475" ignored="false" />
-    <file path="/setExam.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381430076541" ignored="false" />
-    <file path="/RoomComboModel.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381391674906" ignored="false" />
-    <file path="/StreamGridEditWindow.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381753143081" ignored="false" />
-    <file path="/getDivision.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381396491587" ignored="false" />
-    <file path="/getTeacher.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381913466401" ignored="false" />
-    <file path="/Level.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381398385931" ignored="false" />
-    <file path="/Teacher.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381412419447" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/user/getRegStatus.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381430396768" ignored="false" />
-    <file path="/getRegStatus.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381430395096" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/inf.txt" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381429286649" ignored="false" />
-    <file path="/inf.txt" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381429286951" ignored="false" />
-    <file path="/Form.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381482603185" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/view/user/PanelTestingV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381510717854" ignored="false" />
-    <file path="/PanelTestingV.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381510642838" ignored="false" />
-    <file path="dbtable:/6938804d/77d95072-fc69-45f4-a450-1d97b85e21d9/transoil..card" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381768449877" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/admin/getCard.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381859911727" ignored="false" />
-    <file path="/getCard.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381942898740" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/user/getCard.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382035578135" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/store/user/CardS.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381861327061" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/App/model/user/CardM.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381941666190" ignored="false" />
-    <file path="/getSubject.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381912875631" ignored="false" />
-    <file path="/SubjectComboModel.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381910909486" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/user/getExam.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381938109455" ignored="false" />
-    <file path="/getExam.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1381938083815" ignored="false" />
-    <file path="$PROJECT_DIR$/../warehouse/var.js" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382023957696" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/user/saveCard.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382035531623" ignored="false" />
-    <file path="/saveCard.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382035462418" ignored="false" />
-    <file path="$PROJECT_DIR$/../transoil/php/user/saveClass.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382037980352" ignored="false" />
-    <file path="/saveClass.php" changelist="36014a95-449e-411f-945f-8fd605f19511" time="1382037947962" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -314,13 +25,13 @@
     <favorites_list name="nagruzka" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.4773316">
+    <splitter split-orientation="horizontal" split-proportion="0.47733158">
       <split-first>
         <leaf>
           <file leaf-file-name="StreamGridEditWindow.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/App/controller/StreamGridEditWindow.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="34" column="16" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
+                <state line="34" column="16" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="9042">
                   <folding />
                 </state>
               </provider>
@@ -329,16 +40,25 @@
           <file leaf-file-name="Grid.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/App/view/GroupGrid/Grid.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="140" column="42" selection-start="4203" selection-end="4221" vertical-scroll-proportion="0.0">
+                <state line="130" column="34" selection-start="3844" selection-end="3844" vertical-scroll-proportion="0.0" vertical-offset="2860" max-vertical-offset="9328">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Main.js" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="Main.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/App/controller/Main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="595" column="11" selection-start="26334" selection-end="26408" vertical-scroll-proportion="0.4067227">
+                <state line="606" column="14" selection-start="26678" selection-end="26678" vertical-scroll-proportion="0.0" vertical-offset="13332" max-vertical-offset="18898">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Viewport.js" pinned="false" current="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/App/view/Viewport.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="79" column="0" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.28807557" vertical-offset="1494" max-vertical-offset="2354">
                   <folding />
                 </state>
               </provider>
@@ -351,7 +71,7 @@
           <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="34" column="22" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0">
+                <state line="35" column="22" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="5038">
                   <folding />
                 </state>
               </provider>
@@ -360,40 +80,16 @@
           <file leaf-file-name="syncGrid.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/php/GroupGrid/syncGrid.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="763" column="2" selection-start="30195" selection-end="30195" vertical-scroll-proportion="0.0">
-                  <folding>
-                    <marker date="1381916249065" expanded="true" signature="2055:2097" placeholder="--(nagid, pr..." />
-                    <marker date="1381916249065" expanded="true" signature="5668:5695" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="7096:7123" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="8599:8626" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="9846:9873" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="11275:11302" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="12778:12805" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="13552:13566" placeholder="-- Семинары ..." />
-                    <marker date="1381916249065" expanded="true" signature="14029:14056" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="15458:15485" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="16961:16988" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="18213:18240" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="19639:19666" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="21139:21166" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="22367:22394" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="23793:23820" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="25293:25320" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="26521:26548" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="27947:27974" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="29447:29474" placeholder="--t.subgroup..." />
-                    <marker date="1381916249065" expanded="true" signature="31312:31335" placeholder="--l.rooms = ..." />
-                    <marker date="1381916249065" expanded="true" signature="31687:31710" placeholder="--l.rooms = ..." />
-                    <marker date="1381916249065" expanded="true" signature="32062:32085" placeholder="--l.rooms = ..." />
-                  </folding>
+                <state line="756" column="2" selection-start="29954" selection-end="29954" vertical-scroll-proportion="0.0" vertical-offset="16632" max-vertical-offset="20174">
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="syncGrid.php" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="syncGrid.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/php/StreamGrid/syncGrid.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="257" column="21" selection-start="11162" selection-end="11162" vertical-scroll-proportion="0.03722504">
+                <state line="260" column="25" selection-start="11284" selection-end="11284" vertical-scroll-proportion="0.32352942" vertical-offset="5456" max-vertical-offset="14366">
                   <folding>
                     <marker date="1381923693173" expanded="true" signature="1364:1386" placeholder="-- id NAGRUZ..." />
                     <marker date="1381923693173" expanded="true" signature="1874:1948" placeholder="--to_char(wm..." />
@@ -411,7 +107,7 @@
           <file leaf-file-name="Form.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/App/view/StreamGrid/Edit/Form.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="66" column="27" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0">
+                <state line="75" column="27" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="3124">
                   <folding />
                 </state>
               </provider>
@@ -420,7 +116,7 @@
           <file leaf-file-name="include.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/include.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="10" column="4" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+                <state line="15" column="2" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="462">
                   <folding />
                 </state>
               </provider>
@@ -459,8 +155,8 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="2" />
-    <option name="width" value="1914" />
+    <option name="x" value="8" />
+    <option name="width" value="1886" />
     <option name="height" value="1032" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -471,10 +167,37 @@
             <id />
           </State>
           <State>
+            <id>ActionScript specificJavaScript</id>
+          </State>
+          <State>
+            <id>Assignment issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Bitwise operation issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Code SmellPHP</id>
+          </State>
+          <State>
             <id>Code StylePHP</id>
           </State>
           <State>
-            <id>Code style issuesJavaScript</id>
+            <id>Code quality toolsJavaScript</id>
+          </State>
+          <State>
+            <id>Control FlowPHP</id>
+          </State>
+          <State>
+            <id>Control flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>DOM issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Data flow issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Error handlingJavaScript</id>
           </State>
           <State>
             <id>General</id>
@@ -483,18 +206,63 @@
             <id>GeneralJavaScript</id>
           </State>
           <State>
+            <id>GeneralPHP</id>
+          </State>
+          <State>
             <id>JavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript function metricsJavaScript</id>
+          </State>
+          <State>
+            <id>JavaScript validity issuesJavaScript</id>
+          </State>
+          <State>
+            <id>Naming conventionsJavaScript</id>
           </State>
           <State>
             <id>PHP</id>
           </State>
           <State>
+            <id>PHPDocPHP</id>
+          </State>
+          <State>
+            <id>Portability issues</id>
+          </State>
+          <State>
+            <id>Potentially confusing code constructsJavaScript</id>
+          </State>
+          <State>
+            <id>Probable bugsJavaScript</id>
+          </State>
+          <State>
+            <id>Probably bugPHP</id>
+          </State>
+          <State>
+            <id>RELAX NG</id>
+          </State>
+          <State>
+            <id>SQL</id>
+          </State>
+          <State>
             <id>Spelling</id>
+          </State>
+          <State>
+            <id>Type compatibilityPHP</id>
+          </State>
+          <State>
+            <id>UndefinedPHP</id>
+          </State>
+          <State>
+            <id>UnusedPHP</id>
+          </State>
+          <State>
+            <id>XML</id>
           </State>
         </expanded-state>
         <selected-state>
           <State>
-            <id>JSValidateTypes</id>
+            <id>XmlHighlighting</id>
           </State>
         </selected-state>
       </profile-state>
@@ -810,11 +578,11 @@
   <component name="PropertiesComponent">
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="options.lastSelected" value="web.server" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../warehouse" />
+    <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../transoil" />
     <property name="FullScreen" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="PublishConfig" serverName="nagruzka" serverId="6f7acbfd-e385-4a94-aa32-8c972431ef3c" promptOnLocalOverwrite="false" autoUpload="true" uploadOnSaveAll="true">
     <servers>
@@ -833,11 +601,7 @@
         </serverdata>
       </server>
       <server id="33ffb3fb-a9ee-49d0-82b7-29a7c52c0a77">
-        <serverdata>
-          <mappings>
-            <mapping local="$PROJECT_DIR$" />
-          </mappings>
-        </serverdata>
+        <serverdata />
       </server>
       <server id="3e39edcf-f9bd-4b2f-8285-ac83a2f79b24">
         <serverdata>
@@ -958,16 +722,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="2" y="0" width="1914" height="1032" extended-state="0" />
+    <frame x="8" y="0" width="1886" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33953488" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.22906977" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17342582" sideWeight="0.23033068" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16702703" sideWeight="0.77093023" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15471092" sideWeight="0.77172655" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15271494" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -977,6 +741,7 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.22827347" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -987,58 +752,9 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="OFFER_MOVE_TO_ANOTHER_CHANGELIST_ON_PARTIAL_COMMIT" value="true" />
-    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="true" />
-    <option name="CHECK_NEW_TODO" value="true" />
     <option name="myTodoPanelSettings">
-      <value>
-        <are-packages-shown value="false" />
-        <are-modules-shown value="false" />
-        <flatten-packages value="false" />
-        <is-autoscroll-to-source value="false" />
-      </value>
+      <TodoPanelSettings />
     </option>
-    <option name="PERFORM_UPDATE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_COMMIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_EDIT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_CHECKOUT_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ADD_REMOVE_IN_BACKGROUND" value="true" />
-    <option name="PERFORM_ROLLBACK_IN_BACKGROUND" value="false" />
-    <option name="CHECK_LOCALLY_CHANGED_CONFLICTS_IN_BACKGROUND" value="false" />
-    <option name="CHANGED_ON_SERVER_INTERVAL" value="60" />
-    <option name="SHOW_ONLY_CHANGED_IN_SELECTION_DIFF" value="true" />
-    <option name="CHECK_COMMIT_MESSAGE_SPELLING" value="true" />
-    <option name="DEFAULT_PATCH_EXTENSION" value="patch" />
-    <option name="SHORT_DIFF_HORIZONTALLY" value="true" />
-    <option name="SHORT_DIFF_EXTRA_LINES" value="2" />
-    <option name="SOFT_WRAPS_IN_SHORT_DIFF" value="true" />
-    <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
-    <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
-    <option name="SHOW_FILE_HISTORY_DETAILS" value="true" />
-    <option name="SHOW_VCS_ERROR_NOTIFICATIONS" value="true" />
-    <option name="SHOW_DIRTY_RECURSIVELY" value="false" />
-    <option name="LIMIT_HISTORY" value="true" />
-    <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
-    <option name="UPDATE_FILTER_SCOPE_NAME" />
-    <option name="USE_COMMIT_MESSAGE_MARGIN" value="false" />
-    <option name="COMMIT_MESSAGE_MARGIN_SIZE" value="72" />
-    <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
-    <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" />
-    <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
-    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="false" />
-    <option name="REFORMAT_BEFORE_FILE_COMMIT" value="false" />
-    <option name="FILE_HISTORY_DIALOG_COMMENTS_SPLITTER_PROPORTION" value="0.8" />
-    <option name="FILE_HISTORY_DIALOG_SPLITTER_PROPORTION" value="0.5" />
-    <option name="ACTIVE_VCS_NAME" />
-    <option name="UPDATE_GROUP_BY_PACKAGES" value="false" />
-    <option name="UPDATE_GROUP_BY_CHANGELIST" value="false" />
-    <option name="UPDATE_FILTER_BY_SCOPE" value="false" />
-    <option name="SHOW_FILE_HISTORY_AS_TREE" value="false" />
-    <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1048,129 +764,91 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/php/getSubject.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="2" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.65917605">
-          <folding />
-        </state>
+        <state line="45" column="2" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.65917605" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/getTeacher.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="2" selection-start="1296" selection-end="1296" vertical-scroll-proportion="-19.161291">
-          <folding />
-        </state>
+        <state line="42" column="2" selection-start="1296" selection-end="1296" vertical-scroll-proportion="-19.161291" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/store/Teacher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="6" selection-start="112" selection-end="112" vertical-scroll-proportion="0.07932692">
-          <folding />
-        </state>
+        <state line="3" column="6" selection-start="112" selection-end="112" vertical-scroll-proportion="0.07932692" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/view/GroupGrid/Teacher.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="43" selection-start="262" selection-end="262" vertical-scroll-proportion="0.18509616">
-          <folding />
-        </state>
+        <state line="7" column="43" selection-start="262" selection-end="262" vertical-scroll-proportion="0.18509616" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/view/StreamGrid/Grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="74" column="30" selection-start="2096" selection-end="2096" vertical-scroll-proportion="1.6715506">
-          <folding />
-        </state>
+        <state line="74" column="30" selection-start="2096" selection-end="2096" vertical-scroll-proportion="1.6715506" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/controller/StreamGridEditWindow.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="16" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0">
+        <state line="34" column="16" selection-start="835" selection-end="835" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/store/Subject.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="29" selection-start="12" selection-end="29" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/view/Viewport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="68" selection-start="1915" selection-end="1915" vertical-scroll-proportion="1.1899039">
-          <folding />
-        </state>
+        <state line="0" column="29" selection-start="12" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/App/view/GroupGrid/Grid.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="140" column="42" selection-start="4203" selection-end="4221" vertical-scroll-proportion="0.0">
+        <state line="130" column="34" selection-start="3844" selection-end="3844" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/controller/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="606" column="14" selection-start="26678" selection-end="26678" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="22" selection-start="1048" selection-end="1048" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/view/StreamGrid/Edit/Form.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="66" column="27" selection-start="2229" selection-end="2229" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/getGroup.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="35" column="22" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/php/GroupGrid/syncGrid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="763" column="2" selection-start="30195" selection-end="30195" vertical-scroll-proportion="0.0">
-          <folding>
-            <marker date="1381916249065" expanded="true" signature="2055:2097" placeholder="--(nagid, pr..." />
-            <marker date="1381916249065" expanded="true" signature="5668:5695" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="7096:7123" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="8599:8626" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="9846:9873" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="11275:11302" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="12778:12805" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="13552:13566" placeholder="-- Семинары ..." />
-            <marker date="1381916249065" expanded="true" signature="14029:14056" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="15458:15485" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="16961:16988" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="18213:18240" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="19639:19666" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="21139:21166" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="22367:22394" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="23793:23820" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="25293:25320" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="26521:26548" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="27947:27974" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="29447:29474" placeholder="--t.subgroup..." />
-            <marker date="1381916249065" expanded="true" signature="31312:31335" placeholder="--l.rooms = ..." />
-            <marker date="1381916249065" expanded="true" signature="31687:31710" placeholder="--l.rooms = ..." />
-            <marker date="1381916249065" expanded="true" signature="32062:32085" placeholder="--l.rooms = ..." />
-          </folding>
+        <state line="756" column="2" selection-start="29954" selection-end="29954" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/view/StreamGrid/Edit/Form.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="75" column="27" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/include.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="4" selection-start="230" selection-end="230" vertical-scroll-proportion="0.0">
+        <state line="15" column="2" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
           <folding />
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="32" column="27" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.5974026" vertical-offset="198" max-vertical-offset="3146" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/StreamGrid/syncGrid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="257" column="21" selection-start="11162" selection-end="11162" vertical-scroll-proportion="0.03722504">
+        <state line="260" column="25" selection-start="11284" selection-end="11284" vertical-scroll-proportion="0.32352942" vertical-offset="5456" max-vertical-offset="14366">
           <folding>
             <marker date="1381923693173" expanded="true" signature="1364:1386" placeholder="-- id NAGRUZ..." />
             <marker date="1381923693173" expanded="true" signature="1874:1948" placeholder="--to_char(wm..." />
@@ -1184,13 +862,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/controller/Main.js">
+    <entry file="file://$PROJECT_DIR$/App/view/Viewport.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="595" column="11" selection-start="26334" selection-end="26408" vertical-scroll-proportion="0.4067227">
+        <state line="79" column="0" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.28807557" vertical-offset="1494" max-vertical-offset="2354">
           <folding />
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
 

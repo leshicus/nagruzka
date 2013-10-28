@@ -58,7 +58,7 @@
           <file leaf-file-name="Viewport.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/App/view/Viewport.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="79" column="0" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.28807557" vertical-offset="1494" max-vertical-offset="2354">
+                <state line="79" column="0" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.2961165" vertical-offset="1494" max-vertical-offset="2354">
                   <folding />
                 </state>
               </provider>
@@ -89,7 +89,7 @@
           <file leaf-file-name="syncGrid.php" pinned="false" current="true" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/php/StreamGrid/syncGrid.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="260" column="25" selection-start="11284" selection-end="11284" vertical-scroll-proportion="0.32352942" vertical-offset="5456" max-vertical-offset="14366">
+                <state line="260" column="25" selection-start="11284" selection-end="11284" vertical-scroll-proportion="0.33291298" vertical-offset="5456" max-vertical-offset="14366">
                   <folding>
                     <marker date="1381923693173" expanded="true" signature="1364:1386" placeholder="-- id NAGRUZ..." />
                     <marker date="1381923693173" expanded="true" signature="1874:1948" placeholder="--to_char(wm..." />
@@ -723,15 +723,15 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="8" y="0" width="1886" height="1032" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33953488" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3394919" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17342582" sideWeight="0.23033068" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15471092" sideWeight="0.77172655" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15879121" sideWeight="0.6605081" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15271494" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -846,9 +846,16 @@
         <state line="32" column="27" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.5974026" vertical-offset="198" max-vertical-offset="3146" />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/App/view/Viewport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="0" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.2961165" vertical-offset="1494" max-vertical-offset="2354">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/php/StreamGrid/syncGrid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="260" column="25" selection-start="11284" selection-end="11284" vertical-scroll-proportion="0.32352942" vertical-offset="5456" max-vertical-offset="14366">
+        <state line="260" column="25" selection-start="11284" selection-end="11284" vertical-scroll-proportion="0.33291298" vertical-offset="5456" max-vertical-offset="14366">
           <folding>
             <marker date="1381923693173" expanded="true" signature="1364:1386" placeholder="-- id NAGRUZ..." />
             <marker date="1381923693173" expanded="true" signature="1874:1948" placeholder="--to_char(wm..." />
@@ -859,13 +866,6 @@
             <marker date="1381923693173" expanded="true" signature="24733:24760" placeholder="--l.rooms = ..." />
             <marker date="1381923693173" expanded="true" signature="26305:26322" placeholder="--'$roomsStr..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/view/Viewport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.28807557" vertical-offset="1494" max-vertical-offset="2354">
-          <folding />
         </state>
       </provider>
     </entry>

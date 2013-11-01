@@ -25,7 +25,7 @@
     <favorites_list name="nagruzka" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.47733158">
+    <splitter split-orientation="horizontal" split-proportion="0.56806284">
       <split-first>
         <leaf>
           <file leaf-file-name="StreamGridEditWindow.js" pinned="false" current="false" current-in-tab="false">
@@ -40,7 +40,16 @@
           <file leaf-file-name="Grid.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/App/view/GroupGrid/Grid.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="130" column="34" selection-start="3844" selection-end="3844" vertical-scroll-proportion="0.0" vertical-offset="2860" max-vertical-offset="9328">
+                <state line="126" column="17" selection-start="3696" selection-end="3696" vertical-scroll-proportion="0.0" vertical-offset="2415" max-vertical-offset="9328">
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="style.css" pinned="false" current="true" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/style.css">
+              <provider selected="true" editor-type-id="text-editor">
+                <state line="22" column="0" selection-start="1022" selection-end="1100" vertical-scroll-proportion="0.5873786" vertical-offset="0" max-vertical-offset="3146">
                   <folding />
                 </state>
               </provider>
@@ -49,16 +58,16 @@
           <file leaf-file-name="Main.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/App/controller/Main.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="606" column="14" selection-start="26678" selection-end="26678" vertical-scroll-proportion="0.0" vertical-offset="13332" max-vertical-offset="18898">
+                <state line="392" column="21" selection-start="16711" selection-end="16711" vertical-scroll-proportion="0.0" vertical-offset="8189" max-vertical-offset="18898">
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Viewport.js" pinned="false" current="false" current-in-tab="true">
+          <file leaf-file-name="Viewport.js" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/App/view/Viewport.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="79" column="0" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.2961165" vertical-offset="1494" max-vertical-offset="2354">
+                <state line="24" column="47" selection-start="635" selection-end="699" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2354">
                   <folding />
                 </state>
               </provider>
@@ -68,10 +77,10 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="false">
+          <file leaf-file-name="app.js" pinned="false" current="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/app.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="35" column="22" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.0" vertical-offset="770" max-vertical-offset="5038">
+                <state line="187" column="14" selection-start="6204" selection-end="6204" vertical-scroll-proportion="0.75970876" vertical-offset="3290" max-vertical-offset="4840">
                   <folding />
                 </state>
               </provider>
@@ -80,16 +89,40 @@
           <file leaf-file-name="syncGrid.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/php/GroupGrid/syncGrid.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="756" column="2" selection-start="29954" selection-end="29954" vertical-scroll-proportion="0.0" vertical-offset="16632" max-vertical-offset="20174">
-                  <folding />
+                <state line="376" column="66" selection-start="13584" selection-end="14714" vertical-scroll-proportion="-199.83871" vertical-offset="2077" max-vertical-offset="20174">
+                  <folding>
+                    <marker date="1381916249065" expanded="true" signature="2055:2097" placeholder="--(nagid, pr..." />
+                    <marker date="1381916249065" expanded="true" signature="5668:5695" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="7096:7123" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="8599:8626" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="9846:9873" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="11275:11302" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="12778:12805" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="13552:13566" placeholder="-- Семинары ..." />
+                    <marker date="1381916249065" expanded="true" signature="14029:14056" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="15458:15485" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="16961:16988" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="18213:18240" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="19639:19666" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="21139:21166" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="22367:22394" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="23793:23820" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="25293:25320" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="26521:26548" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="27947:27974" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="29447:29474" placeholder="--t.subgroup..." />
+                    <marker date="1381916249065" expanded="true" signature="31312:31335" placeholder="--l.rooms = ..." />
+                    <marker date="1381916249065" expanded="true" signature="31687:31710" placeholder="--l.rooms = ..." />
+                    <marker date="1381916249065" expanded="true" signature="32062:32085" placeholder="--l.rooms = ..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="syncGrid.php" pinned="false" current="true" current-in-tab="true">
+          <file leaf-file-name="syncGrid.php" pinned="false" current="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/php/StreamGrid/syncGrid.php">
               <provider selected="true" editor-type-id="text-editor">
-                <state line="260" column="25" selection-start="11284" selection-end="11284" vertical-scroll-proportion="0.33291298" vertical-offset="5456" max-vertical-offset="14366">
+                <state line="249" column="0" selection-start="10939" selection-end="10939" vertical-scroll-proportion="-5.7419353" vertical-offset="5300" max-vertical-offset="14366">
                   <folding>
                     <marker date="1381923693173" expanded="true" signature="1364:1386" placeholder="-- id NAGRUZ..." />
                     <marker date="1381923693173" expanded="true" signature="1874:1948" placeholder="--to_char(wm..." />
@@ -108,15 +141,6 @@
             <entry file="file://$PROJECT_DIR$/App/view/StreamGrid/Edit/Form.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state line="75" column="27" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.0" vertical-offset="1650" max-vertical-offset="3124">
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="include.php" pinned="false" current="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/include.php">
-              <provider selected="true" editor-type-id="text-editor">
-                <state line="15" column="2" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="330" max-vertical-offset="462">
                   <folding />
                 </state>
               </provider>
@@ -579,10 +603,10 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="options.lastSelected" value="project.propVCSSupport.Mappings" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../transoil" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gene" />
     <property name="FullScreen" value="false" />
-    <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="options.searchVisible" value="true" />
   </component>
   <component name="PublishConfig" serverName="nagruzka" serverId="6f7acbfd-e385-4a94-aa32-8c972431ef3c" promptOnLocalOverwrite="false" autoUpload="true" uploadOnSaveAll="true">
     <servers>
@@ -609,6 +633,9 @@
             <mapping local="$PROJECT_DIR$" />
           </mappings>
         </serverdata>
+      </server>
+      <server id="41710a3a-117f-45b1-a6eb-2c37c8992e71">
+        <serverdata />
       </server>
       <server id="6f7acbfd-e385-4a94-aa32-8c972431ef3c">
         <serverdata>
@@ -642,6 +669,9 @@
             <mapping deploy="\" local="$PROJECT_DIR$/../Kidsclub" web="/" />
           </mappings>
         </serverdata>
+      </server>
+      <server id="e0a05491-8b1e-4f28-91f4-6ac6a6243c67">
+        <serverdata />
       </server>
     </servers>
   </component>
@@ -725,19 +755,19 @@
     <frame x="8" y="0" width="1886" height="1032" extended-state="0" />
     <editor active="true" />
     <layout>
+      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.147806" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3394919" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.17342582" sideWeight="0.23033068" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.15879121" sideWeight="0.6605081" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.16043957" sideWeight="0.852194" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.15271494" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="File Transfer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14883721" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -762,11 +792,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/php/getSubject.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="2" selection-start="1096" selection-end="1096" vertical-scroll-proportion="0.65917605" vertical-offset="0" max-vertical-offset="0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/getTeacher.php">
       <provider selected="true" editor-type-id="text-editor">
         <state line="42" column="2" selection-start="1296" selection-end="1296" vertical-scroll-proportion="-19.161291" vertical-offset="0" max-vertical-offset="0" />
@@ -799,34 +824,6 @@
         <state line="0" column="29" selection-start="12" selection-end="29" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/App/view/GroupGrid/Grid.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="130" column="34" selection-start="3844" selection-end="3844" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/controller/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="606" column="14" selection-start="26678" selection-end="26678" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="22" selection-start="1142" selection-end="1142" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/php/GroupGrid/syncGrid.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="756" column="2" selection-start="29954" selection-end="29954" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/App/view/StreamGrid/Edit/Form.js">
       <provider selected="true" editor-type-id="text-editor">
         <state line="75" column="27" selection-start="2571" selection-end="2571" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
@@ -834,28 +831,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/include.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="2" selection-start="410" selection-end="410" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="27" selection-start="1272" selection-end="1272" vertical-scroll-proportion="0.5974026" vertical-offset="198" max-vertical-offset="3146" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/App/view/Viewport.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="0" selection-start="2764" selection-end="2764" vertical-scroll-proportion="0.2961165" vertical-offset="1494" max-vertical-offset="2354">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/php/StreamGrid/syncGrid.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="260" column="25" selection-start="11284" selection-end="11284" vertical-scroll-proportion="0.33291298" vertical-offset="5456" max-vertical-offset="14366">
+        <state line="249" column="0" selection-start="10939" selection-end="10939" vertical-scroll-proportion="-5.7419353" vertical-offset="5300" max-vertical-offset="14366">
           <folding>
             <marker date="1381923693173" expanded="true" signature="1364:1386" placeholder="-- id NAGRUZ..." />
             <marker date="1381923693173" expanded="true" signature="1874:1948" placeholder="--to_char(wm..." />
@@ -866,6 +844,86 @@
             <marker date="1381923693173" expanded="true" signature="24733:24760" placeholder="--l.rooms = ..." />
             <marker date="1381923693173" expanded="true" signature="26305:26322" placeholder="--'$roomsStr..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/include.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="2" selection-start="410" selection-end="410" vertical-scroll-proportion="0.49624062" vertical-offset="0" max-vertical-offset="665">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/view/Viewport.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="47" selection-start="635" selection-end="699" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="2354">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/font-size.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1408">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/php/GroupGrid/syncGrid.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="376" column="66" selection-start="13584" selection-end="14714" vertical-scroll-proportion="-199.83871" vertical-offset="2077" max-vertical-offset="20174">
+          <folding>
+            <marker date="1381916249065" expanded="true" signature="2055:2097" placeholder="--(nagid, pr..." />
+            <marker date="1381916249065" expanded="true" signature="5668:5695" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="7096:7123" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="8599:8626" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="9846:9873" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="11275:11302" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="12778:12805" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="13552:13566" placeholder="-- Семинары ..." />
+            <marker date="1381916249065" expanded="true" signature="14029:14056" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="15458:15485" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="16961:16988" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="18213:18240" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="19639:19666" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="21139:21166" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="22367:22394" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="23793:23820" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="25293:25320" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="26521:26548" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="27947:27974" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="29447:29474" placeholder="--t.subgroup..." />
+            <marker date="1381916249065" expanded="true" signature="31312:31335" placeholder="--l.rooms = ..." />
+            <marker date="1381916249065" expanded="true" signature="31687:31710" placeholder="--l.rooms = ..." />
+            <marker date="1381916249065" expanded="true" signature="32062:32085" placeholder="--l.rooms = ..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/controller/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="392" column="21" selection-start="16711" selection-end="16711" vertical-scroll-proportion="0.0" vertical-offset="8189" max-vertical-offset="18898">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="187" column="14" selection-start="6204" selection-end="6204" vertical-scroll-proportion="0.75970876" vertical-offset="3290" max-vertical-offset="4840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/App/view/GroupGrid/Grid.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="126" column="17" selection-start="3696" selection-end="3696" vertical-scroll-proportion="0.0" vertical-offset="2415" max-vertical-offset="9328">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/style.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="0" selection-start="1022" selection-end="1100" vertical-scroll-proportion="0.5873786" vertical-offset="0" max-vertical-offset="3146">
+          <folding />
         </state>
       </provider>
     </entry>
